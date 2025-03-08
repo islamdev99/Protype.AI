@@ -1,0 +1,1564 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protype.AI - الذكاء الاصطناعي المحادثي الذكي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary-color: #0288d1;
+            --secondary-color: #01579b;
+            --accent-color: #FFC107;
+            --success-color: #4CAF50;
+            --danger-color: #F44336;
+            --bg-color: #e8f1f5;
+            --text-color: #333333;
+            --light-bg: #f1f1f1;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --gradient-bg: linear-gradient(135deg, #0288d1 0%, #26C6DA 100%);
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+        
+        .app-container {
+            max-width: 100%;
+            padding: 15px;
+        }
+        
+        .card {
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 20px;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-header {
+            background: var(--gradient-bg);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            font-weight: bold;
+            padding: 15px;
+        }
+        
+        .tab-content {
+            padding: 20px;
+        }
+        
+        .chat-message {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 12px;
+            word-wrap: break-word;
+            animation: fadeIn 0.5s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .user-message {
+            background-color: #e3f2fd;
+            margin-left: 20px;
+            text-align: right;
+            border-bottom-right-radius: 0;
+        }
+        
+        .bot-message {
+            background-color: var(--light-bg);
+            margin-right: 20px;
+            text-align: right;
+            border-bottom-left-radius: 0;
+        }
+        
+        .user-message::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: -10px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top-color: #e3f2fd;
+            border-bottom: 0;
+            border-right: 0;
+            margin-bottom: 0px;
+        }
+        
+        .bot-message::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -10px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top-color: var(--light-bg);
+            border-bottom: 0;
+            border-left: 0;
+            margin-bottom: 0px;
+        }
+        
+        .input-group {
+            margin-top: 15px;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-bg);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        
+        .nav-pills .nav-link.active {
+            background: var(--gradient-bg);
+        }
+        
+        .chat-container {
+            height: 50vh;
+            overflow-y: auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            scroll-behavior: smooth;
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 0 5px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+        }
+        
+        .nav-pills .nav-link:hover {
+            background-color: rgba(2, 136, 209, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .form-control {
+            border-radius: 20px;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(2, 136, 209, 0.25);
+        }
+        
+        .btn {
+            border-radius: 20px;
+            padding: 10px 25px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .app-title {
+            font-size: 32px;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+        }
+        
+        .app-subtitle {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .feature-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .mobile-nav {
+            display: flex;
+            justify-content: space-around;
+            background: var(--gradient-bg);
+            border-radius: 20px;
+            padding: 15px 10px;
+            position: fixed;
+            bottom: 20px;
+            left: 15px;
+            right: 15px;
+            z-index: 1000;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-item.active {
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .mobile-nav-item i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            color: white;
+            transition: opacity 0.5s;
+        }
+        
+        .splash-logo {
+            font-size: 70px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .splash-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .splash-subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .loading-dots {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .loading-dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 6px;
+            background-color: white;
+            border-radius: 50%;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        
+        .loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .info-box {
+            background-color: rgba(2, 136, 209, 0.1);
+            border-right: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .audio-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .btn-audio {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: #333;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-audio:hover {
+            transform: scale(1.1);
+            background-color: #FFD54F;
+        }
+        
+        .dashboard-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .dashboard-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dashboard-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .stats-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            flex: 1;
+            min-width: 150px;
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: var(--gradient-bg);
+            color: white;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: inherit;
+        }
+        
+        .activity-log {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .activity-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .voice-selector {
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                margin: 0 0 15px 0;
+            }
+            
+            .app-title {
+                font-size: 26px;
+            }
+            
+            .app-subtitle {
+                font-size: 14px;
+            }
+            
+            .dashboard-preview {
+                padding: 15px;
+            }
+            
+            .stats-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            body {
+                padding-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-logo animate__animated animate__pulse animate__infinite"><i class="bi bi-robot"></i></div>
+        <div class="splash-title animate__animated animate__fadeInUp">Protype.AI</div>
+        <div class="splash-subtitle animate__animated animate__fadeInUp animate__delay-1s">الذكاء الاصطناعي المحادثي الذكي</div>
+        <div class="loading-dots">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+    </div>
+
+    <div class="container app-container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h1 class="text-center app-title animate__animated animate__fadeInDown">
+                    <i class="bi bi-robot text-primary"></i> Protype.AI
+                </h1>
+                <p class="text-center app-subtitle animate__animated animate__fadeInUp">الذكاء الاصطناعي المحادثي الذكي المتطور</p>
+                
+                <div class="info-box animate__animated animate__fadeIn animate__delay-1s">
+                    <h5><i class="bi bi-info-circle-fill me-2"></i> مرحباً بك في Protype.AI</h5>
+                    <p>منصتنا هي نظام ذكاء اصطناعي متطور قادر على التعلم والتحسن باستمرار. يمكنك التحدث معي، تعليمي معلومات جديدة، أو البحث عن معلومات عبر الإنترنت. أيضًا، يمكنني تحويل النص إلى كلام منطوق!</p>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav nav-pills mb-4 justify-content-center d-none d-md-flex animate__animated animate__fadeInUp" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" data-bs-target="#pills-chat" type="button" role="tab" aria-controls="pills-chat" aria-selected="true">
+                            <i class="bi bi-chat-dots me-2"></i> المحادثة
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-teach-tab" data-bs-toggle="pill" data-bs-target="#pills-teach" type="button" role="tab" aria-controls="pills-teach" aria-selected="false">
+                            <i class="bi bi-book me-2"></i> التعليم
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-search-tab" data-bs-toggle="pill" data-bs-target="#pills-search" type="button" role="tab" aria-controls="pills-search" aria-selected="false">
+                            <i class="bi bi-search me-2"></i> البحث
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#pills-dashboard" type="button" role="tab" aria-controls="pills-dashboard" aria-selected="false">
+                            <i class="bi bi-graph-up me-2"></i> لوحة التحكم
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-speech-tab" data-bs-toggle="pill" data-bs-target="#pills-speech" type="button" role="tab" aria-controls="pills-speech" aria-selected="false">
+                            <i class="bi bi-mic me-2"></i> النص إلى كلام
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- Chat Tab -->
+                    <div class="tab-pane fade show active animate__animated animate__fadeIn" id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-chat-dots me-2"></i> تحدث مع Protype.AI
+                            </div>
+                            <div class="card-body p-0">
+                                <div id="chat-container" class="chat-container">
+                                    <div class="chat-message bot-message">
+                                        <strong>Protype.AI:</strong> مرحباً! أنا Protype.AI، جاهز للمساعدة. اسألني أي شيء!
+                                    </div>
+                                </div>
+                                <div class="input-group p-3">
+                                    <input type="text" id="chat-input" class="form-control" placeholder="اسألني شيئًا..." dir="rtl">
+                                    <button class="btn btn-primary" type="button" id="send-chat">
+                                        <i class="bi bi-send"></i> إرسال
+                                    </button>
+                                    <button class="btn btn-outline-primary ms-2" type="button" id="chat-to-speech">
+                                        <i class="bi bi-volume-up"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teach Tab -->
+                    <div class="tab-pane fade animate__animated animate__fadeIn" id="pills-teach" role="tabpanel" aria-labelledby="pills-teach-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-book me-2"></i> علّم Protype شيئًا جديدًا!
+                            </div>
+                            <div class="card-body">
+                                <div class="info-box mb-4">
+                                    <p><i class="bi bi-lightbulb me-2"></i> ساعدني على التعلم! أدخل سؤالاً وإجابته، وسأتذكرها في المرات القادمة.</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="teach-question" class="form-label">ما هو سؤالك؟</label>
+                                    <input type="text" class="form-control" id="teach-question" placeholder="أدخل سؤالًا..." dir="rtl">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="teach-answer" class="form-label">ما هي الإجابة؟</label>
+                                    <textarea class="form-control" id="teach-answer" rows="3" placeholder="أدخل الإجابة..." dir="rtl"></textarea>
+                                </div>
+                                <div id="teach-feedback" class="alert alert-info d-none">
+                                    شكرًا لتعليمي شيئًا جديدًا!
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-primary" type="button" id="send-teach">
+                                        <i class="bi bi-lightbulb me-2"></i> علمني
+                                    </button>
+                                    <button class="btn btn-outline-secondary" type="button" id="clear-teach">
+                                        <i class="bi bi-x-circle me-2"></i> مسح
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Tab -->
+                    <div class="tab-pane fade animate__animated animate__fadeIn" id="pills-search" role="tabpanel" aria-labelledby="pills-search-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-search me-2"></i> ابحث وتعلم مع Protype!
+                            </div>
+                            <div class="card-body">
+                                <div class="info-box mb-4">
+                                    <p><i class="bi bi-info-circle me-2"></i> ابحث عن أي موضوع وسأجلب لك معلومات من مصادر موثوقة على الإنترنت.</p>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="search-input" class="form-control" placeholder="ماذا تريد أن تبحث عنه؟" dir="rtl">
+                                    <button class="btn btn-primary" type="button" id="send-search">
+                                        <i class="bi bi-search me-2"></i> بحث
+                                    </button>
+                                </div>
+                                <div id="search-results" class="mt-4">
+                                    <p class="text-muted text-center"><i class="bi bi-arrow-up-circle"></i> أدخل استعلام بحث، وسأجلب شيئًا مفيدًا!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dashboard Tab -->
+                    <div class="tab-pane fade animate__animated animate__fadeIn" id="pills-dashboard" role="tabpanel" aria-labelledby="pills-dashboard-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-graph-up me-2"></i> لوحة تحكم Protype.AI
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-title">
+                                    <span>إحصائيات قاعدة المعرفة</span>
+                                    <button class="btn btn-sm btn-outline-primary" id="refresh-dashboard">
+                                        <i class="bi bi-arrow-clockwise"></i> تحديث
+                                    </button>
+                                </div>
+                                
+                                <div class="stats-row">
+                                    <div class="stat-card">
+                                        <div class="stat-label">إجمالي الأسئلة</div>
+                                        <div class="stat-value" id="question-count">...</div>
+                                        <i class="bi bi-question-circle"></i>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-label">العقد المعرفية</div>
+                                        <div class="stat-value" id="node-count">...</div>
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-label">الروابط المعرفية</div>
+                                        <div class="stat-value" id="edge-count">...</div>
+                                        <i class="bi bi-link-45deg"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="dashboard-title mt-4">
+                                    <span>النشاطات الأخيرة</span>
+                                </div>
+                                
+                                <div class="activity-log" id="activity-log">
+                                    <div class="text-center p-3">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="visually-hidden">جاري التحميل...</span>
+                                        </div>
+                                        <p class="mt-2">جاري تحميل النشاطات...</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h5>حالة التعلم المستمر</h5>
+                                    <div class="d-flex mt-3">
+                                        <button class="btn btn-success me-2" id="start-learning">
+                                            <i class="bi bi-play-fill me-2"></i> بدء التعلم
+                                        </button>
+                                        <button class="btn btn-danger me-2" id="stop-learning">
+                                            <i class="bi bi-stop-fill me-2"></i> إيقاف التعلم
+                                        </button>
+                                        <button class="btn btn-primary" id="generate-report">
+                                            <i class="bi bi-file-earmark-text me-2"></i> توليد تقرير
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Text to Speech Tab -->
+                    <div class="tab-pane fade animate__animated animate__fadeIn" id="pills-speech" role="tabpanel" aria-labelledby="pills-speech-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-mic me-2"></i> تحويل النص إلى كلام
+                            </div>
+                            <div class="card-body">
+                                <div class="info-box mb-4">
+                                    <p><i class="bi bi-info-circle me-2"></i> أدخل أي نص وسأقوم بتحويله إلى كلام منطوق يمكنك الاستماع إليه.</p>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="speech-text" class="form-label">النص للتحويل</label>
+                                    <textarea class="form-control" id="speech-text" rows="4" placeholder="أدخل النص الذي تريد تحويله إلى كلام..." dir="rtl"></textarea>
+                                </div>
+                                
+                                <div class="mb-3 voice-selector">
+                                    <label for="voice-select" class="form-label">اختر الصوت</label>
+                                    <select class="form-select" id="voice-select">
+                                        <option value="21m00Tcm4TlvDq8ikWAM" selected>الافتراضي (مناسب للعربية)</option>
+                                        <option value="pNInz6obpgDQGcFmaJgB">آدم (ذكر)</option>
+                                        <option value="EXAVITQu4vr4xnSDxMaL">راشيل (أنثى)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-primary" id="generate-speech">
+                                        <i class="bi bi-soundwave me-2"></i> توليد الكلام
+                                    </button>
+                                    <button class="btn btn-outline-secondary" id="clear-speech">
+                                        <i class="bi bi-x-circle me-2"></i> مسح
+                                    </button>
+                                </div>
+                                
+                                <div id="audio-result" class="mt-4 d-none">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">الكلام المُوَلّد</h5>
+                                            <div id="audio-player" class="text-center my-3"></div>
+                                            <div class="progress mb-3">
+                                                <div id="audio-progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span id="current-time">0:00</span>
+                                                <span id="duration">0:00</span>
+                                            </div>
+                                            <div class="audio-controls mt-3">
+                                                <button class="btn btn-audio" id="play-pause">
+                                                    <i class="bi bi-play-fill"></i>
+                                                </button>
+                                                <button class="btn btn-audio" id="stop-audio">
+                                                    <i class="bi bi-stop-fill"></i>
+                                                </button>
+                                                <button class="btn btn-audio" id="download-audio">
+                                                    <i class="bi bi-download"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="speech-loading" class="text-center mt-4 d-none">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">جاري توليد الكلام...</span>
+                                    </div>
+                                    <p class="mt-2">جاري توليد الكلام، يرجى الانتظار...</p>
+                                </div>
+                                
+                                <div id="speech-error" class="alert alert-danger mt-4 d-none">
+                                    حدث خطأ أثناء توليد الكلام. يرجى المحاولة مرة أخرى.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="text-muted mb-0">
+                                <i class="bi bi-code-slash me-2"></i> طُوّر بواسطة Islam Ibrahim  
+                                <span class="mx-2">|</span>
+                                <i class="bi bi-robot me-2"></i> محرك الذكاء: Protype.AI 
+                                <span class="mx-2">|</span>
+                                <i class="bi bi-calendar3 me-2"></i> <span id="current-year">2023</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav d-md-none animate__animated animate__fadeInUp">
+        <a href="#" class="mobile-nav-item active" data-bs-target="#pills-chat">
+            <i class="bi bi-chat-dots"></i>
+            <span>المحادثة</span>
+        </a>
+        <a href="#" class="mobile-nav-item" data-bs-target="#pills-teach">
+            <i class="bi bi-book"></i>
+            <span>التعليم</span>
+        </a>
+        <a href="#" class="mobile-nav-item" data-bs-target="#pills-search">
+            <i class="bi bi-search"></i>
+            <span>البحث</span>
+        </a>
+        <a href="#" class="mobile-nav-item" data-bs-target="#pills-dashboard">
+            <i class="bi bi-graph-up"></i>
+            <span>لوحة التحكم</span>
+        </a>
+        <a href="#" class="mobile-nav-item" data-bs-target="#pills-speech">
+            <i class="bi bi-mic"></i>
+            <span>النص إلى كلام</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Splash Screen with enhanced animation
+            setTimeout(function() {
+                const splash = document.getElementById('splash-screen');
+                splash.style.opacity = '0';
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                }, 500);
+            }, 2000);
+            
+            // Mobile Navigation
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+            mobileNavItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all items
+                    mobileNavItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Get target tab
+                    const targetId = this.getAttribute('data-bs-target');
+                    const targetTab = document.querySelector(targetId);
+                    
+                    // Hide all tabs
+                    document.querySelectorAll('.tab-pane').forEach(tab => {
+                        tab.classList.remove('show', 'active');
+                    });
+                    
+                    // Show target tab
+                    targetTab.classList.add('show', 'active');
+                });
+            });
+            
+            // Chat functionality
+            const chatInput = document.getElementById('chat-input');
+            const sendChatBtn = document.getElementById('send-chat');
+            const chatContainer = document.getElementById('chat-container');
+            const chatToSpeechBtn = document.getElementById('chat-to-speech');
+            
+            // Keep track of the last bot response for text-to-speech
+            let lastBotResponse = "مرحباً! أنا Protype.AI، جاهز للمساعدة. اسألني أي شيء!";
+            
+            chatToSpeechBtn.addEventListener('click', function() {
+                if (lastBotResponse) {
+                    generateSpeechFromText(lastBotResponse);
+                }
+            });
+            
+            function sendChatMessage() {
+                const message = chatInput.value.trim();
+                if (!message) return;
+                
+                // Add user message to chat with animation
+                appendMessage('أنت', message, true);
+                chatInput.value = '';
+                
+                // Show loading indicator
+                const loadingId = 'loading-' + Date.now();
+                appendLoadingMessage(loadingId);
+                
+                // Send API request
+                fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question: message }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Remove loading indicator
+                    document.getElementById(loadingId)?.remove();
+                    
+                    if (data.status === 'success') {
+                        appendMessage('Protype.AI', data.answer, false);
+                        lastBotResponse = data.answer; // Store for text-to-speech
+                    } else {
+                        appendMessage('Protype.AI', 'عذرًا، واجهت خطأ: ' + data.message, false);
+                        lastBotResponse = 'عذرًا، واجهت خطأ: ' + data.message;
+                    }
+                })
+                .catch(error => {
+                    // Remove loading indicator
+                    document.getElementById(loadingId)?.remove();
+                    
+                    const errorMsg = 'عذرًا، واجهت خطأ تقنيًا. يرجى المحاولة مرة أخرى.';
+                    appendMessage('Protype.AI', errorMsg, false);
+                    lastBotResponse = errorMsg;
+                    console.error('Error:', error);
+                });
+                
+                // Scroll to bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            function appendMessage(sender, message, isUser) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'} animate__animated animate__fadeInUp`;
+                messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+                
+                // Add audio button for bot messages
+                if (!isUser) {
+                    const audioBtn = document.createElement('button');
+                    audioBtn.className = 'btn btn-sm btn-outline-primary float-start mt-2';
+                    audioBtn.innerHTML = '<i class="bi bi-volume-up"></i>';
+                    audioBtn.onclick = function() {
+                        generateSpeechFromText(message);
+                    };
+                    messageDiv.appendChild(audioBtn);
+                }
+                
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            function appendLoadingMessage(id) {
+                const loadingDiv = document.createElement('div');
+                loadingDiv.className = 'chat-message bot-message';
+                loadingDiv.id = id;
+                loadingDiv.innerHTML = `
+                    <strong>Protype.AI:</strong> 
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">جاري التفكير</span>
+                        <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow spinner-grow-sm text-primary ms-1" role="status" style="animation-delay: 0.2s">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow spinner-grow-sm text-primary ms-1" role="status" style="animation-delay: 0.4s">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                `;
+                chatContainer.appendChild(loadingDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            sendChatBtn.addEventListener('click', sendChatMessage);
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendChatMessage();
+                }
+            });
+            
+            // Teach functionality
+            const teachQuestionInput = document.getElementById('teach-question');
+            const teachAnswerInput = document.getElementById('teach-answer');
+            const sendTeachBtn = document.getElementById('send-teach');
+            const clearTeachBtn = document.getElementById('clear-teach');
+            const teachFeedback = document.getElementById('teach-feedback');
+            
+            function sendTeachData() {
+                const question = teachQuestionInput.value.trim();
+                const answer = teachAnswerInput.value.trim();
+                
+                if (!question || !answer) {
+                    teachFeedback.textContent = 'يرجى ملء كل من السؤال والإجابة!';
+                    teachFeedback.className = 'alert alert-warning animate__animated animate__shakeX';
+                    teachFeedback.classList.remove('d-none');
+                    return;
+                }
+                
+                // Show loading 
+                teachFeedback.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">جاري الحفظ</span>
+                        <div class="spinner-border spinner-border-sm text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                `;
+                teachFeedback.className = 'alert alert-info';
+                teachFeedback.classList.remove('d-none');
+                
+                fetch('/teach', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question, answer }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        teachFeedback.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i> شكرًا! لقد تعلمت شيئًا جديدًا!';
+                        teachFeedback.className = 'alert alert-success animate__animated animate__fadeIn';
+                        teachQuestionInput.value = '';
+                        teachAnswerInput.value = '';
+                        
+                        // Refresh dashboard data if needed
+                        refreshDashboardData();
+                    } else {
+                        teachFeedback.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i> عفوًا! ' + data.message;
+                        teachFeedback.className = 'alert alert-danger animate__animated animate__fadeIn';
+                    }
+                })
+                .catch(error => {
+                    teachFeedback.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i> عذرًا، حدث خطأ تقني.';
+                    teachFeedback.className = 'alert alert-danger animate__animated animate__fadeIn';
+                    console.error('Error:', error);
+                });
+            }
+            
+            sendTeachBtn.addEventListener('click', sendTeachData);
+            clearTeachBtn.addEventListener('click', function() {
+                teachQuestionInput.value = '';
+                teachAnswerInput.value = '';
+                teachFeedback.classList.add('d-none');
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            const sendSearchBtn = document.getElementById('send-search');
+            const searchResults = document.getElementById('search-results');
+            
+            function sendSearchQuery() {
+                const query = searchInput.value.trim();
+                if (!query) return;
+                
+                searchResults.innerHTML = `
+                    <div class="text-center p-4">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">جاري البحث...</span>
+                        </div>
+                        <p class="mt-2">جاري البحث عن "${query}"...</p>
+                    </div>
+                `;
+                
+                fetch('/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success' && data.results.length > 0) {
+                        let resultsHtml = `
+                            <div class="alert alert-success">
+                                <i class="bi bi-check-circle-fill me-2"></i> تم العثور على ${data.results.length} نتيجة لبحثك عن "${query}"
+                            </div>
+                        `;
+                        
+                        data.results.forEach((result, index) => {
+                            resultsHtml += `
+                                <div class="card mb-3 animate__animated animate__fadeIn" style="animation-delay: ${index * 0.1}s">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <strong>س: ${result.question}</strong>
+                                        <button class="btn btn-sm btn-outline-primary play-result" data-text="${result.answer}">
+                                            <i class="bi bi-volume-up"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>${result.answer}</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted">المصدر: ${result.source}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        
+                        searchResults.innerHTML = resultsHtml;
+                        
+                        // Add event listeners to play buttons
+                        document.querySelectorAll('.play-result').forEach(button => {
+                            button.addEventListener('click', function() {
+                                const text = this.getAttribute('data-text');
+                                generateSpeechFromText(text);
+                            });
+                        });
+                    } else {
+                        searchResults.innerHTML = `
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle-fill me-2"></i> لم يتم العثور على نتائج لـ "${query}"
+                            </div>
+                            <div class="text-center">
+                                <p>جرب تعديل كلمات البحث أو البحث عن موضوع مختلف</p>
+                                <button class="btn btn-outline-primary mt-2" id="try-again-search">
+                                    <i class="bi bi-arrow-repeat me-2"></i> محاولة أخرى
+                                </button>
+                            </div>
+                        `;
+                        
+                        document.getElementById('try-again-search').addEventListener('click', function() {
+                            searchInput.focus();
+                        });
+                    }
+                })
+                .catch(error => {
+                    searchResults.innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> عذرًا، حدث خطأ تقني.
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-danger mt-2" id="retry-search">
+                                <i class="bi bi-arrow-repeat me-2"></i> إعادة المحاولة
+                            </button>
+                        </div>
+                    `;
+                    
+                    document.getElementById('retry-search').addEventListener('click', function() {
+                        sendSearchQuery();
+                    });
+                    
+                    console.error('Error:', error);
+                });
+            }
+            
+            sendSearchBtn.addEventListener('click', sendSearchQuery);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendSearchQuery();
+                }
+            });
+            
+            // Dashboard functionality
+            const refreshDashboardBtn = document.getElementById('refresh-dashboard');
+            const startLearningBtn = document.getElementById('start-learning');
+            const stopLearningBtn = document.getElementById('stop-learning');
+            const generateReportBtn = document.getElementById('generate-report');
+            const questionCountEl = document.getElementById('question-count');
+            const nodeCountEl = document.getElementById('node-count');
+            const edgeCountEl = document.getElementById('edge-count');
+            const activityLogEl = document.getElementById('activity-log');
+            
+            function refreshDashboardData() {
+                // Show loading indicators
+                questionCountEl.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div>';
+                nodeCountEl.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div>';
+                edgeCountEl.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div>';
+                
+                activityLogEl.innerHTML = `
+                    <div class="text-center p-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">جاري التحميل...</span>
+                        </div>
+                        <p class="mt-2">جاري تحميل البيانات...</p>
+                    </div>
+                `;
+                
+                // Fetch dashboard data
+                fetch('/dashboard-stats', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Update stats with animation
+                        countUp(questionCountEl, 0, data.question_count, 1000);
+                        countUp(nodeCountEl, 0, data.node_count, 1000);
+                        countUp(edgeCountEl, 0, data.edge_count, 1000);
+                        
+                        // Update activity log
+                        let activitiesHtml = '';
+                        if (data.activities && data.activities.length > 0) {
+                            data.activities.forEach((activity, index) => {
+                                activitiesHtml += `
+                                    <div class="activity-item animate__animated animate__fadeIn" style="animation-delay: ${index * 0.1}s">
+                                        <strong>${activity.timestamp}</strong> - 
+                                        <span class="badge bg-${getActivityBadgeColor(activity.action)}">${activity.action}</span>
+                                        ${activity.description}
+                                    </div>
+                                `;
+                            });
+                        } else {
+                            activitiesHtml = '<p class="text-center text-muted">لا توجد نشاطات حديثة</p>';
+                        }
+                        
+                        activityLogEl.innerHTML = activitiesHtml;
+                    } else {
+                        // Show error
+                        questionCountEl.textContent = "؟";
+                        nodeCountEl.textContent = "؟";
+                        edgeCountEl.textContent = "؟";
+                        
+                        activityLogEl.innerHTML = `
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle-fill me-2"></i> تعذر تحميل البيانات
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    
+                    // Show error
+                    questionCountEl.textContent = "!";
+                    nodeCountEl.textContent = "!";
+                    edgeCountEl.textContent = "!";
+                    
+                    activityLogEl.innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> خطأ في الاتصال
+                        </div>
+                    `;
+                });
+            }
+            
+            function getActivityBadgeColor(action) {
+                switch(action) {
+                    case 'chat': return 'primary';
+                    case 'teach': return 'success';
+                    case 'search': return 'info';
+                    case 'background_learn': return 'warning';
+                    case 'application_start': return 'secondary';
+                    default: return 'secondary';
+                }
+            }
+            
+            function countUp(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const value = Math.floor(progress * (end - start) + start);
+                    element.textContent = value;
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        element.textContent = end;
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+            
+            refreshDashboardBtn.addEventListener('click', refreshDashboardData);
+            
+            startLearningBtn.addEventListener('click', function() {
+                this.disabled = true;
+                this.innerHTML = '<div class="spinner-border spinner-border-sm me-2" role="status"></div> جاري البدء...';
+                
+                fetch('/start-learning', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        showToast('تم بدء التعلم المستمر بنجاح');
+                    } else {
+                        showToast('تعذر بدء التعلم المستمر', 'error');
+                    }
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-play-fill me-2"></i> بدء التعلم';
+                    refreshDashboardData();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('حدث خطأ أثناء محاولة بدء التعلم', 'error');
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-play-fill me-2"></i> بدء التعلم';
+                });
+            });
+            
+            stopLearningBtn.addEventListener('click', function() {
+                this.disabled = true;
+                this.innerHTML = '<div class="spinner-border spinner-border-sm me-2" role="status"></div> جاري الإيقاف...';
+                
+                fetch('/stop-learning', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        showToast('تم إيقاف التعلم المستمر بنجاح');
+                    } else {
+                        showToast('تعذر إيقاف التعلم المستمر', 'error');
+                    }
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-stop-fill me-2"></i> إيقاف التعلم';
+                    refreshDashboardData();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('حدث خطأ أثناء محاولة إيقاف التعلم', 'error');
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-stop-fill me-2"></i> إيقاف التعلم';
+                });
+            });
+            
+            generateReportBtn.addEventListener('click', function() {
+                this.disabled = true;
+                this.innerHTML = '<div class="spinner-border spinner-border-sm me-2" role="status"></div> جاري التوليد...';
+                
+                fetch('/generate-report', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        showToast(`تم توليد التقرير بنجاح: ${data.report_path}`);
+                    } else {
+                        showToast('تعذر توليد التقرير', 'error');
+                    }
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-file-earmark-text me-2"></i> توليد تقرير';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('حدث خطأ أثناء محاولة توليد التقرير', 'error');
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-file-earmark-text me-2"></i> توليد تقرير';
+                });
+            });
+            
+            // Text to Speech functionality
+            const speechTextArea = document.getElementById('speech-text');
+            const voiceSelect = document.getElementById('voice-select');
+            const generateSpeechBtn = document.getElementById('generate-speech');
+            const clearSpeechBtn = document.getElementById('clear-speech');
+            const audioResult = document.getElementById('audio-result');
+            const audioPlayer = document.getElementById('audio-player');
+            const speechLoading = document.getElementById('speech-loading');
+            const speechError = document.getElementById('speech-error');
+            
+            let currentAudio = null;
+            
+            function generateSpeechFromText(text, voice) {
+                // Use the function parameter or get from UI if called directly
+                const textToSpeak = text || speechTextArea.value.trim();
+                const voiceId = voice || voiceSelect.value;
+                
+                if (!textToSpeak) {
+                    showToast('الرجاء إدخال نص للتحويل إلى كلام', 'error');
+                    return;
+                }
+                
+                // Reset UI
+                audioResult.classList.add('d-none');
+                speechError.classList.add('d-none');
+                
+                // Show loading
+                if (!text) { // Only show loading if called from speech tab
+                    speechLoading.classList.remove('d-none');
+                }
+                
+                // Request text-to-speech
+                fetch('/text-to-speech', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 
+                        text: textToSpeak,
+                        voice_id: voiceId
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    speechLoading.classList.add('d-none');
+                    
+                    if (data.status === 'success' && data.audio_base64) {
+                        // Create audio element
+                        const audioSrc = `data:audio/mpeg;base64,${data.audio_base64}`;
+                        
+                        // If called from somewhere else than the speech tab
+                        if (text) {
+                            // Create and play temporary audio
+                            const tempAudio = new Audio(audioSrc);
+                            tempAudio.play();
+                            return;
+                        }
+                        
+                        // Update audio player
+                        audioPlayer.innerHTML = `
+                            <audio id="speech-audio" src="${audioSrc}" preload="auto"></audio>
+                        `;
+                        
+                        // Get audio element
+                        const audioElement = document.getElementById('speech-audio');
+                        currentAudio = audioElement;
+                        
+                        // Setup audio controls
+                        setupAudioControls(audioElement);
+                        
+                        // Show audio player
+                        audioResult.classList.remove('d-none');
+                        
+                        // Auto-play
+                        audioElement.play();
+                    } else {
+                        speechError.textContent = data.error || 'حدث خطأ أثناء توليد الكلام';
+                        speechError.classList.remove('d-none');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    speechLoading.classList.add('d-none');
+                    speechError.classList.remove('d-none');
+                });
+            }
+            
+            function setupAudioControls(audioElement) {
+                const playPauseBtn = document.getElementById('play-pause');
+                const stopAudioBtn = document.getElementById('stop-audio');
+                const downloadAudioBtn = document.getElementById('download-audio');
+                const audioProgress = document.getElementById('audio-progress');
+                const currentTimeEl = document.getElementById('current-time');
+                const durationEl = document.getElementById('duration');
+                
+                // Update play/pause button state
+                function updatePlayPauseButton() {
+                    if (audioElement.paused) {
+                        playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                    } else {
+                        playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+                    }
+                }
+                
+                // Format time in MM:SS
+                function formatTime(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const secs = Math.floor(seconds % 60);
+                    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+                }
+                
+                // Update progress
+                audioElement.addEventListener('timeupdate', function() {
+                    const progress = (audioElement.currentTime / audioElement.duration) * 100;
+                    audioProgress.style.width = `${progress}%`;
+                    audioProgress.setAttribute('aria-valuenow', progress);
+                    
+                    currentTimeEl.textContent = formatTime(audioElement.currentTime);
+                });
+                
+                // When metadata is loaded
+                audioElement.addEventListener('loadedmetadata', function() {
+                    durationEl.textContent = formatTime(audioElement.duration);
+                });
+                
+                // When audio ends
+                audioElement.addEventListener('ended', function() {
+                    audioElement.currentTime = 0;
+                    updatePlayPauseButton();
+                });
+                
+                // Play/Pause button
+                playPauseBtn.addEventListener('click', function() {
+                    if (audioElement.paused) {
+                        audioElement.play();
+                    } else {
+                        audioElement.pause();
+                    }
+                    updatePlayPauseButton();
+                });
+                
+                // Stop button
+                stopAudioBtn.addEventListener('click', function() {
+                    audioElement.pause();
+                    audioElement.currentTime = 0;
+                    updatePlayPauseButton();
+                });
+                
+                // Download button
+                downloadAudioBtn.addEventListener('click', function() {
+                    const link = document.createElement('a');
+                    link.href = audioElement.src;
+                    link.download = 'protype_ai_speech.mp3';
+                    link.click();
+                });
+                
+                // Initial state
+                updatePlayPauseButton();
+            }
+            
+            function showToast(message, type = 'success') {
+                // Create toast container if it doesn't exist
+                let toastContainer = document.getElementById('toast-container');
+                if (!toastContainer) {
+                    toastContainer = document.createElement('div');
+                    toastContainer.id = 'toast-container';
+                    toastContainer.className = 'position-fixed bottom-0 end-0 p-3';
+                    toastContainer.style.zIndex = '1050';
+                    document.body.appendChild(toastContainer);
+                }
+                
+                const toastId = 'toast-' + Date.now();
+                const bgClass = type === 'error' ? 'bg-danger' : 'bg-success';
+                
+                const toastHtml = `
+                    <div id="${toastId}" class="toast align-items-center text-white ${bgClass} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="d-flex">
+                            <div class="toast-body">
+                                ${message}
+                            </div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
+                `;
+                
+                toastContainer.insertAdjacentHTML('beforeend', toastHtml);
+                
+                const toastElement = document.getElementById(toastId);
+                const toast = new bootstrap.Toast(toastElement, { autohide: true, delay: 3000 });
+                toast.show();
+                
+                // Remove toast after it's hidden
+                toastElement.addEventListener('hidden.bs.toast', function() {
+                    toastElement.remove();
+                });
+            }
+            
+            generateSpeechBtn.addEventListener('click', function() {
+                generateSpeechFromText();
+            });
+            
+            clearSpeechBtn.addEventListener('click', function() {
+                speechTextArea.value = '';
+                audioResult.classList.add('d-none');
+                speechError.classList.add('d-none');
+                
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio = null;
+                }
+            });
+            
+            // Add swipe gesture support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            document.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                const currentTabId = document.querySelector('.tab-pane.active').id;
+                const swipeThreshold = 50;
+                
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left - next tab
+                    const tabs = ['pills-chat', 'pills-teach', 'pills-search', 'pills-dashboard', 'pills-speech'];
+                    const currentIndex = tabs.indexOf(currentTabId);
+                    if (currentIndex < tabs.length - 1) {
+                        document.querySelector(`[data-bs-target="#${tabs[currentIndex + 1]}"]`).click();
+                    }
+                }
+                
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right - previous tab
+                    const tabs = ['pills-chat', 'pills-teach', 'pills-search', 'pills-dashboard', 'pills-speech'];
+                    const currentIndex = tabs.indexOf(currentTabId);
+                    if (currentIndex > 0) {
+                        document.querySelector(`[data-bs-target="#${tabs[currentIndex - 1]}"]`).click();
+                    }
+                }
+            }
+            
+            // Initialize dashboard on load
+            if (document.getElementById('dashboard-tab')) {
+                document.getElementById('dashboard-tab').addEventListener('shown.bs.tab', function (e) {
+                    refreshDashboardData();
+                });
+            }
+            
+            // Init dashboard on first load
+            setTimeout(refreshDashboardData, 3000);
+        });
+    </script>
+</body>
+</html>

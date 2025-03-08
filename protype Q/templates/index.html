@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protype.AI - الذكاء الاصطناعي المحادثي الذكي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0288d1;
+            --secondary-color: #01579b;
+            --bg-color: #e8f1f5;
+            --text-color: #333333;
+            --light-bg: #f1f1f1;
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        
+        .app-container {
+            max-width: 100%;
+            padding: 10px;
+        }
+        
+        .card {
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 15px;
+            border: none;
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            font-weight: bold;
+            padding: 12px;
+        }
+        
+        .tab-content {
+            padding: 15px;
+        }
+        
+        .chat-message {
+            margin-bottom: 12px;
+            padding: 10px;
+            border-radius: 10px;
+            word-wrap: break-word;
+        }
+        
+        .user-message {
+            background-color: #e3f2fd;
+            margin-left: 15px;
+            text-align: right;
+        }
+        
+        .bot-message {
+            background-color: var(--light-bg);
+            margin-right: 15px;
+            text-align: right;
+        }
+        
+        .input-group {
+            margin-top: 10px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .chat-container {
+            height: 50vh;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 0 2px;
+            border-radius: 10px;
+        }
+        
+        .form-control {
+            border-radius: 20px;
+            padding: 10px 15px;
+        }
+        
+        .btn {
+            border-radius: 20px;
+            padding: 8px 20px;
+        }
+        
+        .app-title {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .app-subtitle {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .mobile-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            z-index: 1000;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .mobile-nav-item.active {
+            color: var(--primary-color);
+        }
+        
+        .mobile-nav-item i {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            color: white;
+            transition: opacity 0.5s;
+        }
+        
+        .splash-logo {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .splash-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .splash-subtitle {
+            font-size: 16px;
+        }
+        
+        .loading-dots {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .loading-dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: white;
+            border-radius: 50%;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        
+        .loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .card {
+                margin: 0 0 10px 0;
+            }
+            
+            .app-title {
+                font-size: 20px;
+            }
+            
+            .app-subtitle {
+                font-size: 12px;
+            }
+            
+            body {
+                padding-bottom: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-logo"><i class="bi bi-robot"></i></div>
+        <div class="splash-title">Protype.AI</div>
+        <div class="splash-subtitle">الذكاء الاصطناعي المحادثي الذكي</div>
+        <div class="loading-dots">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+    </div>
+
+    <div class="container app-container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h1 class="text-center app-title">
+                    <i class="bi bi-robot text-primary"></i> Protype.AI
+                </h1>
+                <p class="text-center text-muted app-subtitle">الذكاء الاصطناعي المحادثي الذكي</p>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav nav-pills mb-3 justify-content-center d-none d-md-flex" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" data-bs-target="#pills-chat" type="button" role="tab" aria-controls="pills-chat" aria-selected="true">
+                            <i class="bi bi-chat-dots"></i> المحادثة
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-teach-tab" data-bs-toggle="pill" data-bs-target="#pills-teach" type="button" role="tab" aria-controls="pills-teach" aria-selected="false">
+                            <i class="bi bi-book"></i> التعليم
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-search-tab" data-bs-toggle="pill" data-bs-target="#pills-search" type="button" role="tab" aria-controls="pills-search" aria-selected="false">
+                            <i class="bi bi-search"></i> البحث
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- Chat Tab -->
+                    <div class="tab-pane fade show active" id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-chat-dots"></i> تحدث مع Protype.AI
+                            </div>
+                            <div class="card-body p-0">
+                                <div id="chat-container" class="chat-container">
+                                    <div class="chat-message bot-message">
+                                        <strong>Protype.AI:</strong> مرحباً! أنا Protype.AI، جاهز للمساعدة. اسألني أي شيء!
+                                    </div>
+                                </div>
+                                <div class="input-group p-2">
+                                    <input type="text" id="chat-input" class="form-control" placeholder="اسألني شيئًا..." dir="rtl">
+                                    <button class="btn btn-primary" type="button" id="send-chat">
+                                        <i class="bi bi-send"></i> إرسال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teach Tab -->
+                    <div class="tab-pane fade" id="pills-teach" role="tabpanel" aria-labelledby="pills-teach-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-book"></i> علّم Protype شيئًا جديدًا!
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="teach-question" class="form-label">ما هو سؤالك؟</label>
+                                    <input type="text" class="form-control" id="teach-question" placeholder="أدخل سؤالًا..." dir="rtl">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="teach-answer" class="form-label">ما هي الإجابة؟</label>
+                                    <textarea class="form-control" id="teach-answer" rows="3" placeholder="أدخل الإجابة..." dir="rtl"></textarea>
+                                </div>
+                                <div id="teach-feedback" class="alert alert-info d-none">
+                                    شكرًا لتعليمي شيئًا جديدًا!
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-primary" type="button" id="send-teach">
+                                        <i class="bi bi-lightbulb"></i> علمني
+                                    </button>
+                                    <button class="btn btn-secondary" type="button" id="clear-teach">
+                                        <i class="bi bi-x-circle"></i> مسح
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Tab -->
+                    <div class="tab-pane fade" id="pills-search" role="tabpanel" aria-labelledby="pills-search-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="bi bi-search"></i> ابحث وتعلم مع Protype!
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="search-input" class="form-control" placeholder="ماذا تريد أن تبحث عنه؟" dir="rtl">
+                                    <button class="btn btn-primary" type="button" id="send-search">
+                                        <i class="bi bi-search"></i> بحث
+                                    </button>
+                                </div>
+                                <div id="search-results" class="mt-3">
+                                    <p class="text-muted">أدخل استعلام بحث، وسأجلب شيئًا مفيدًا!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-2 mb-5 text-muted">
+                    <small>&copy; 2023 Protype.AI - طُوّر بواسطة Islam Ibrahim</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav d-md-none">
+        <a href="#" class="mobile-nav-item active" data-bs-target="#pills-chat">
+            <i class="bi bi-chat-dots"></i>
+            <span>المحادثة</span>
+        </a>
+        <a href="#" class="mobile-nav-item" data-bs-target="#pills-teach">
+            <i class="bi bi-book"></i>
+            <span>التعليم</span>
+        </a>
+        <a href="#" class="mobile-nav-item" data-bs-target="#pills-search">
+            <i class="bi bi-search"></i>
+            <span>البحث</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Splash Screen
+            setTimeout(function() {
+                const splash = document.getElementById('splash-screen');
+                splash.style.opacity = '0';
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                }, 500);
+            }, 2000);
+            
+            // Mobile Navigation
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+            mobileNavItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all items
+                    mobileNavItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Get target tab
+                    const targetId = this.getAttribute('data-bs-target');
+                    const targetTab = document.querySelector(targetId);
+                    
+                    // Hide all tabs
+                    document.querySelectorAll('.tab-pane').forEach(tab => {
+                        tab.classList.remove('show', 'active');
+                    });
+                    
+                    // Show target tab
+                    targetTab.classList.add('show', 'active');
+                });
+            });
+            
+            // Chat functionality
+            const chatInput = document.getElementById('chat-input');
+            const sendChatBtn = document.getElementById('send-chat');
+            const chatContainer = document.getElementById('chat-container');
+            
+            function sendChatMessage() {
+                const message = chatInput.value.trim();
+                if (!message) return;
+                
+                // Add user message to chat
+                appendMessage('أنت', message, true);
+                chatInput.value = '';
+                
+                // Show loading indicator
+                const loadingId = 'loading-' + Date.now();
+                appendLoadingMessage(loadingId);
+                
+                // Send API request
+                fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question: message }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Remove loading indicator
+                    document.getElementById(loadingId)?.remove();
+                    
+                    if (data.status === 'success') {
+                        appendMessage('Protype.AI', data.answer, false);
+                    } else {
+                        appendMessage('Protype.AI', 'عذرًا، واجهت خطأ: ' + data.message, false);
+                    }
+                })
+                .catch(error => {
+                    // Remove loading indicator
+                    document.getElementById(loadingId)?.remove();
+                    
+                    appendMessage('Protype.AI', 'عذرًا، واجهت خطأ تقنيًا. يرجى المحاولة مرة أخرى.', false);
+                    console.error('Error:', error);
+                });
+                
+                // Scroll to bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            function appendMessage(sender, message, isUser) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${isUser ? 'user-message' : 'bot-message'}`;
+                messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            function appendLoadingMessage(id) {
+                const loadingDiv = document.createElement('div');
+                loadingDiv.className = 'chat-message bot-message';
+                loadingDiv.id = id;
+                loadingDiv.innerHTML = '<strong>Protype.AI:</strong> <i>جاري التفكير...</i>';
+                chatContainer.appendChild(loadingDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            sendChatBtn.addEventListener('click', sendChatMessage);
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendChatMessage();
+                }
+            });
+            
+            // Teach functionality
+            const teachQuestionInput = document.getElementById('teach-question');
+            const teachAnswerInput = document.getElementById('teach-answer');
+            const sendTeachBtn = document.getElementById('send-teach');
+            const clearTeachBtn = document.getElementById('clear-teach');
+            const teachFeedback = document.getElementById('teach-feedback');
+            
+            function sendTeachData() {
+                const question = teachQuestionInput.value.trim();
+                const answer = teachAnswerInput.value.trim();
+                
+                if (!question || !answer) {
+                    teachFeedback.textContent = 'يرجى ملء كل من السؤال والإجابة!';
+                    teachFeedback.className = 'alert alert-warning';
+                    teachFeedback.classList.remove('d-none');
+                    return;
+                }
+                
+                fetch('/teach', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question, answer }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        teachFeedback.textContent = 'شكرًا! لقد تعلمت شيئًا جديدًا!';
+                        teachFeedback.className = 'alert alert-success';
+                        teachQuestionInput.value = '';
+                        teachAnswerInput.value = '';
+                    } else {
+                        teachFeedback.textContent = 'عفوًا! ' + data.message;
+                        teachFeedback.className = 'alert alert-danger';
+                    }
+                    teachFeedback.classList.remove('d-none');
+                })
+                .catch(error => {
+                    teachFeedback.textContent = 'عذرًا، حدث خطأ تقني.';
+                    teachFeedback.className = 'alert alert-danger';
+                    teachFeedback.classList.remove('d-none');
+                    console.error('Error:', error);
+                });
+            }
+            
+            sendTeachBtn.addEventListener('click', sendTeachData);
+            clearTeachBtn.addEventListener('click', function() {
+                teachQuestionInput.value = '';
+                teachAnswerInput.value = '';
+                teachFeedback.classList.add('d-none');
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            const sendSearchBtn = document.getElementById('send-search');
+            const searchResults = document.getElementById('search-results');
+            
+            function sendSearchQuery() {
+                const query = searchInput.value.trim();
+                if (!query) return;
+                
+                searchResults.innerHTML = '<p><i class="bi bi-hourglass"></i> جاري البحث...</p>';
+                
+                fetch('/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success' && data.results.length > 0) {
+                        let resultsHtml = `<h5>نتائج البحث عن "${query}":</h5>`;
+                        
+                        data.results.forEach(result => {
+                            resultsHtml += `
+                                <div class="card mb-3">
+                                    <div class="card-header bg-light">
+                                        <strong>س:</strong> ${result.question}
+                                    </div>
+                                    <div class="card-body">
+                                        <p>${result.answer}</p>
+                                        <small class="text-muted">المصدر: ${result.source}</small>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        
+                        searchResults.innerHTML = resultsHtml;
+                    } else {
+                        searchResults.innerHTML = `<p>لم يتم العثور على نتائج لـ "${query}"</p>`;
+                    }
+                })
+                .catch(error => {
+                    searchResults.innerHTML = '<p class="text-danger">عذرًا، حدث خطأ تقني.</p>';
+                    console.error('Error:', error);
+                });
+            }
+            
+            sendSearchBtn.addEventListener('click', sendSearchQuery);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendSearchQuery();
+                }
+            });
+            
+            // Add swipe gesture support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            document.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                const currentTabId = document.querySelector('.tab-pane.active').id;
+                const swipeThreshold = 50;
+                
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left
+                    if (currentTabId === 'pills-chat') {
+                        document.querySelector('[data-bs-target="#pills-teach"]').click();
+                    } else if (currentTabId === 'pills-teach') {
+                        document.querySelector('[data-bs-target="#pills-search"]').click();
+                    }
+                }
+                
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right
+                    if (currentTabId === 'pills-search') {
+                        document.querySelector('[data-bs-target="#pills-teach"]').click();
+                    } else if (currentTabId === 'pills-teach') {
+                        document.querySelector('[data-bs-target="#pills-chat"]').click();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
