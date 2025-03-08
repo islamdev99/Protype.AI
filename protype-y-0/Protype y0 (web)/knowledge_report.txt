@@ -1,0 +1,51 @@
+Protype.AI Knowledge Base Report
+========================================
+
+Generated: 2025-03-08 00:32:47
+
+Knowledge Base Stats:
+- Total questions: 8
+- Knowledge graph nodes: 128
+- Knowledge graph connections: 140
+
+Knowledge Sources:
+- gemini_flash_2: 5 items
+- serpapi: 1 items
+- user: 1 items
+- web_user: 1 items
+
+Recent Knowledge:
+Q: who is leo messi
+A: Lionel Andrés Messi, commonly known as Leo Messi, is an Argentine professional footballer who plays ...
+Source: gemini_flash_2
+
+Q: who is maro
+A: this is a best man and he from a mangement of carrot studio...
+Source: user
+
+Q: who are you
+A: I am a large language model, trained by Google.  
+
+That means I'm a computer program that can unders...
+Source: gemini_flash_2
+
+Q: كيف حالك
+A: أنا نموذج لغوي كبير، مُدرب بواسطة جوجل....
+Source: gemini_flash_2
+
+Q: who is messi
+A: Lionel Messi, often considered one of the greatest soccer players of all time, is an Argentine profe...
+Source: gemini_flash_2
+
+Q: من هو اسلام ابراهيم
+A: هو مطور الذكاء الاصطناعي بروتايب...
+Source: web_user
+
+Q: من هو ليونيل ميسي
+A: ليونيل أندريس ميسي كوتشيتيني، المعروف باسم **ليونيل ميسي**، هو لاعب كرة قدم أرجنتيني محترف يلعب كمها...
+Source: gemini_flash_2
+
+Q: search: من هو كوكط
+A: SerpAPI module not available. Please install it using 'pip install serpapi'....
+Source: serpapi
+
