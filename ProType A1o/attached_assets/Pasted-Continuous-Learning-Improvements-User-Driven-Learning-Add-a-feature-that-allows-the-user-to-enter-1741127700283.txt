@@ -1,0 +1,30 @@
+Continuous Learning Improvements
+User-Driven Learning:
+Add a feature that allows the user to enter specific topics they are interested in (such as “Artificial Intelligence” or “Space”), and have LearningManager focus on these topics more over time instead of relying on a fixed list of topics.
+You can use user data analysis (from the Dashboard or Chat) to automatically determine their interests.
+Learning from Multilingual Sources:
+Provide support for fetching data from Wikipedia in other languages ​​(such as Arabic or French) based on the user’s preference, with automatic translation using the Gemini API if the user wants answers in one language.
+Learning from Local Files:
+Add a feature that allows the user to upload files (PDFs, Word, Text) from their device, and have the application analyze them using spaCy or Gemini API and extract new questions and answers to add to the database.
+2. Search & Response Improvements
+Voice Search:
+Add a voice recording feature for questions using libraries like speech_recognition in Python, with the audio converted to text and processed normally, which will make interaction easier, especially for users who prefer voice.
+Visual Answers:
+When the user asks a question like "How do Neural Networks work?", add a feature that displays a graph or chart (using a library like Matplotlib or even working with Gemini to generate illustrative images) with the text answer.
+Answer Comparison:
+If the question is present in the database from different sources (such as Wikipedia and Gemini), display a simple comparison between the answers with the weight of each answer so that the user can choose the most appropriate one.
+3. User Interface Improvements
+Customizable UI:
+Add the ability to change the theme (dark/light) or colors based on the user's preference, while saving these settings in a small database for each user.
+Interactive Dashboard:
+Develop the Dashboard to display charts of learning statistics (number of new questions per day, most popular topics) using a library like Plotly.
+Multi-User Support:
+Add a simple login system (username/password) using a database, so that each user has his own knowledge base and saved settings.
+4. Advanced AI Features
+Educational Content Generator:
+Use Gemini API to generate summaries or quizzes based on the knowledge in the database, for example if the user wants to test himself on the topic "Machine Learning".
+Contextual Interaction:
+Let the chat remember the context within the conversation (like an advanced chatbot), so if the user asks "Who discovered gravity?" and then says "What was its effect?", the application automatically links the second question to Isaac Newton.
+
+Auto Spell Correction:
+Add an auto-correct feature for questions written using a library like pyspellchecker or Gemini API, so if the user writes "What is Artifical Intelligence", it understands it correctly.

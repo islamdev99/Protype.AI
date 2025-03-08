@@ -1,0 +1,70 @@
+
+.sidebar {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 50px;
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.dark-theme.sidebar {
+  background-color: var(--dark-sidebar);
+}
+
+.light-theme.sidebar {
+  background-color: var(--light-sidebar);
+}
+
+.toggle-btn {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+.dark-theme .toggle-btn {
+  color: var(--dark-text);
+}
+
+.light-theme .toggle-btn {
+  color: var(--light-text);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar-nav button {
+  margin-bottom: 10px;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-theme .sidebar-nav button {
+  color: var(--dark-text);
+}
+
+.dark-theme .sidebar-nav button:hover, .dark-theme .sidebar-nav button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-theme .sidebar-nav button {
+  color: var(--light-text);
+}
+
+.light-theme .sidebar-nav button:hover, .light-theme .sidebar-nav button.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}

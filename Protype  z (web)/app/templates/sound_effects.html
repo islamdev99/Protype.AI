@@ -1,0 +1,262 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}مولد المؤثرات الصوتية - Protype.ai{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><i class="bi bi-music-note-beamed me-2"></i> مولد المؤثرات الصوتية</h3>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <p><i class="bi bi-info-circle-fill me-2"></i> أدخل وصفاً نصياً للصوت الذي تريد إنشاءه، وسيقوم النظام بتوليد المؤثر الصوتي المناسب.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="sound-description" class="form-label">وصف المؤثر الصوتي</label>
+                        <textarea id="sound-description" class="form-control" rows="4" placeholder="مثال: صوت قطرات المطر على سطح معدني، صوت انفجار ضخم، صفير الرياح في غابة..." dir="rtl"></textarea>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label for="duration" class="form-label">المدة (بالثواني)</label>
+                            <input type="number" id="duration" class="form-control" min="0.5" max="22" step="0.5" value="3">
+                            <small class="text-muted">من 0.5 إلى 22 ثانية</small>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="prompt-influence" class="form-label">تأثير النص</label>
+                            <input type="range" id="prompt-influence" class="form-range" min="0" max="1" step="0.1" value="0.3">
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">إبداعي</small>
+                                <small class="text-muted" id="influence-value">0.3</small>
+                                <small class="text-muted">دقيق</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button id="generate-sound" class="btn btn-primary">
+                            <i class="bi bi-play-fill me-2"></i> توليد المؤثر الصوتي
+                        </button>
+                        <button id="clear-sound" class="btn btn-outline-secondary">
+                            <i class="bi bi-x-circle me-2"></i> مسح
+                        </button>
+                    </div>
+                    
+                    <div id="sound-result" class="mt-4 d-none">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-soundwave me-2"></i> المؤثر الصوتي الناتج</h5>
+                                <div id="sound-player" class="text-center my-3">
+                                    <!-- سيتم إضافة مشغل الصوت هنا -->
+                                </div>
+                                <div class="progress mb-3">
+                                    <div id="sound-progress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span id="sound-current-time">0:00</span>
+                                    <span id="sound-duration">0:00</span>
+                                </div>
+                                <div class="sound-controls mt-3 text-center">
+                                    <button id="sound-play" class="btn btn-sm btn-primary mx-1"><i class="bi bi-play-fill"></i></button>
+                                    <button id="sound-pause" class="btn btn-sm btn-secondary mx-1"><i class="bi bi-pause-fill"></i></button>
+                                    <button id="sound-stop" class="btn btn-sm btn-danger mx-1"><i class="bi bi-stop-fill"></i></button>
+                                    <button id="sound-download" class="btn btn-sm btn-success mx-1"><i class="bi bi-download"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p class="mb-0 text-muted small">مدعوم بتقنية <a href="#" class="text-decoration-none">ElevenLabs API</a> - للأغراض التعليمية فقط.</p>
+                </div>
+            </div>
+            
+            <div class="card shadow mt-4">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0"><i class="bi bi-lightbulb me-2"></i> اقتراحات للمؤثرات الصوتية</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="suggestion-item mb-2 p-2 rounded" style="cursor: pointer; background-color: rgba(0,123,255,0.1);">
+                                صوت أمواج البحر تتلاطم على الشاطئ بهدوء
+                            </div>
+                            <div class="suggestion-item mb-2 p-2 rounded" style="cursor: pointer; background-color: rgba(0,123,255,0.1);">
+                                أصوات العصافير في صباح مشمس في الغابة
+                            </div>
+                            <div class="suggestion-item mb-2 p-2 rounded" style="cursor: pointer; background-color: rgba(0,123,255,0.1);">
+                                دقات طبول حماسية مع إيقاع متسارع
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="suggestion-item mb-2 p-2 rounded" style="cursor: pointer; background-color: rgba(0,123,255,0.1);">
+                                صوت انفجار قوي يتبعه صدى في الجبال
+                            </div>
+                            <div class="suggestion-item mb-2 p-2 rounded" style="cursor: pointer; background-color: rgba(0,123,255,0.1);">
+                                صفير الرياح القوية في ليلة عاصفة
+                            </div>
+                            <div class="suggestion-item mb-2 p-2 rounded" style="cursor: pointer; background-color: rgba(0,123,255,0.1);">
+                                صوت قطار بخاري قديم يمر على قضبان متهالكة
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript لصفحة المؤثرات الصوتية -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const soundDescription = document.getElementById('sound-description');
+    const duration = document.getElementById('duration');
+    const promptInfluence = document.getElementById('prompt-influence');
+    const influenceValue = document.getElementById('influence-value');
+    const generateSound = document.getElementById('generate-sound');
+    const clearSound = document.getElementById('clear-sound');
+    const soundResult = document.getElementById('sound-result');
+    const soundPlayer = document.getElementById('sound-player');
+    const soundProgress = document.getElementById('sound-progress');
+    const soundCurrentTime = document.getElementById('sound-current-time');
+    const soundDuration = document.getElementById('sound-duration');
+    const soundPlay = document.getElementById('sound-play');
+    const soundPause = document.getElementById('sound-pause');
+    const soundStop = document.getElementById('sound-stop');
+    const soundDownload = document.getElementById('sound-download');
+    
+    let audioElement = null;
+    
+    // تحديث قيمة تأثير النص
+    promptInfluence.addEventListener('input', () => {
+        influenceValue.textContent = promptInfluence.value;
+    });
+    
+    // توليد المؤثر الصوتي
+    generateSound.addEventListener('click', async () => {
+        const description = soundDescription.value.trim();
+        if (!description) {
+            alert('يرجى إدخال وصف للمؤثر الصوتي');
+            return;
+        }
+        
+        // تغيير زر التوليد
+        generateSound.disabled = true;
+        generateSound.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> جاري التوليد...';
+        
+        try {
+            // إرسال طلب لتوليد المؤثر الصوتي
+            const response = await fetch('/api/sound-effects/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    text: description,
+                    duration_seconds: parseFloat(duration.value),
+                    prompt_influence: parseFloat(promptInfluence.value)
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.status === 'success') {
+                // إنشاء عنصر الصوت
+                if (audioElement) {
+                    audioElement.pause();
+                    soundPlayer.innerHTML = '';
+                }
+                
+                audioElement = new Audio(`data:audio/mpeg;base64,${data.audio_base64}`);
+                
+                // إضافة عنصر الصوت إلى المشغل
+                soundPlayer.innerHTML = `<audio id="sound-audio" class="w-100" controls>
+                    <source src="data:audio/mpeg;base64,${data.audio_base64}" type="audio/mpeg">
+                    متصفحك لا يدعم عنصر الصوت.
+                </audio>`;
+                
+                // تحديث مشغل الصوت المخصص
+                audioElement = document.getElementById('sound-audio');
+                
+                // تحديث المدة عند تحميل البيانات
+                audioElement.addEventListener('loadedmetadata', () => {
+                    const minutes = Math.floor(audioElement.duration / 60);
+                    const seconds = Math.floor(audioElement.duration % 60);
+                    soundDuration.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                });
+                
+                // تحديث التقدم أثناء التشغيل
+                audioElement.addEventListener('timeupdate', () => {
+                    const progress = (audioElement.currentTime / audioElement.duration) * 100;
+                    soundProgress.style.width = `${progress}%`;
+                    soundProgress.setAttribute('aria-valuenow', progress);
+                    
+                    const minutes = Math.floor(audioElement.currentTime / 60);
+                    const seconds = Math.floor(audioElement.currentTime % 60);
+                    soundCurrentTime.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                });
+                
+                // أزرار التحكم
+                soundPlay.addEventListener('click', () => audioElement.play());
+                soundPause.addEventListener('click', () => audioElement.pause());
+                soundStop.addEventListener('click', () => {
+                    audioElement.pause();
+                    audioElement.currentTime = 0;
+                });
+                
+                // زر التنزيل
+                soundDownload.addEventListener('click', () => {
+                    const a = document.createElement('a');
+                    a.href = `data:audio/mpeg;base64,${data.audio_base64}`;
+                    a.download = `sound_effect_${new Date().getTime()}.mp3`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+                
+                // إظهار النتيجة
+                soundResult.classList.remove('d-none');
+                
+                // تشغيل الصوت تلقائياً
+                audioElement.play();
+            } else {
+                alert(`خطأ: ${data.error || 'فشل في توليد المؤثر الصوتي'}`);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('حدث خطأ أثناء محاولة توليد المؤثر الصوتي');
+        } finally {
+            // إعادة زر التوليد
+            generateSound.disabled = false;
+            generateSound.innerHTML = '<i class="bi bi-play-fill me-2"></i> توليد المؤثر الصوتي';
+        }
+    });
+    
+    // مسح البيانات
+    clearSound.addEventListener('click', () => {
+        soundDescription.value = '';
+        duration.value = '3';
+        promptInfluence.value = '0.3';
+        influenceValue.textContent = '0.3';
+        
+        if (audioElement) {
+            audioElement.pause();
+        }
+        
+        soundResult.classList.add('d-none');
+    });
+    
+    // المقترحات
+    document.querySelectorAll('.suggestion-item').forEach(item => {
+        item.addEventListener('click', () => {
+            soundDescription.value = item.textContent.trim();
+        });
+    });
+});
+</script>
+{% endblock %}

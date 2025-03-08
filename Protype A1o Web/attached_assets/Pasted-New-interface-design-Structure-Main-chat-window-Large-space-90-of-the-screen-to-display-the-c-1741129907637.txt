@@ -1,0 +1,34 @@
+New interface design
+Structure:
+Main chat window: Large space (90% of the screen) to display the conversation vertically, messages appear from top to bottom (scrollable).
+Text input field: At the bottom, a wide text bar with a "Send" button (or works directly with Enter).
+Sidebar (optional): If we want to keep the Dashboard or settings, it can be collapsible on the side.
+Colors and layout:
+Light gray background (#F7F7F8) or dark gray (#1F2A44) like ChatGPT.
+User messages with green bubbles (#DCF8C6) and AI messages with white bubbles (#FFFFFF) with thin borders.
+A modern font like "Inter" or "Roboto" (available as open fonts).
+Tech:
+With PyQt6: Use QTextEdit for the chat window and QLineEdit for input with QPushButton for sending, with CSS-like styling applied via setStyleSheet.
+With Flask: Use HTML/CSS with a library like Tailwind CSS for fast and responsive design.
+3. Improve interactivity
+Real-Time Typing:
+Add a feature that shows "Protype is typing..." when the application is preparing the answer (like ChatGPT), using a timer in PyQt6 or WebSocket with Flask.
+Markdown Support:
+Make answers appear in Markdown format (titles, lists, code) like ChatGPT, using a library like markdown in Python and converting them to rich text in PyQt6 or HTML in Flask.
+Tech:
+With PyQt6: Use QTextEdit with setMarkdown or manual conversion.
+In Flask: Display text directly as HTML with a library like marked.js.
+4. Integrate features into the conversation
+Instead of separate tabs:
+Learning: User types "/learn Quantum Computing" and the app responds "Learning about Quantum Computing..." and adds the knowledge to the database.
+Search: Types "search: What is AI?" and the app displays the search result in the conversation.
+Statistics: Types "/stats" and a summary of the Dashboard (number of questions, topics) is displayed.
+Technique:
+Add a simple parser in the code to recognize commands (like if input.startswith("/learn")) with appropriate function calls (like learn_from_wikipedia).
+5. Modern techniques for performance and appearance
+Animations:
+Add simple animations (like messages gradually appearing) using QPropertyAnimation in PyQt6 or CSS animations in Flask.
+Responsive Design:
+If we use Flask, we ensure that the interface adapts to different screen sizes (mobile, tablet, laptop) using Tailwind CSS.
+Caching:
+Use a library like redis (already integrated with Celery) to cache common responses, so the response is faster.

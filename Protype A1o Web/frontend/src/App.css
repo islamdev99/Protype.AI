@@ -1,0 +1,100 @@
+
+:root {
+  --dark-bg: #1F2A44;
+  --dark-sidebar: #172035;
+  --dark-text: #F3F4F6;
+  --dark-bubble-user: #3B82F6;
+  --dark-bubble-ai: #374151;
+  --dark-input: #374151;
+  --dark-button: #3B82F6;
+  --dark-button-hover: #2563EB;
+  
+  --light-bg: #F7F7F8;
+  --light-sidebar: #EAEAEB;
+  --light-text: #333333;
+  --light-bubble-user: #DCF8C6;
+  --light-bubble-ai: #FFFFFF;
+  --light-input: #FFFFFF;
+  --light-button: #0088CC;
+  --light-button-hover: #006699;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dark-theme {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.light-theme {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-theme button {
+  background-color: var(--dark-button);
+  color: white;
+}
+
+.dark-theme button:hover {
+  background-color: var(--dark-button-hover);
+}
+
+.light-theme button {
+  background-color: var(--light-button);
+  color: white;
+}
+
+.light-theme button:hover {
+  background-color: var(--light-button-hover);
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dark-theme input, .dark-theme textarea {
+  background-color: var(--dark-input);
+  color: var(--dark-text);
+  border: 1px solid #4a5568;
+}
+
+.light-theme input, .light-theme textarea {
+  background-color: var(--light-input);
+  color: var(--light-text);
+  border: 1px solid #e2e8f0;
+}
