@@ -1,0 +1,696 @@
+{
+    "What is greeting?": "According to Wikipedia under CC BY-SA 3.0, Greeting is an act of communication in which human beings intentionally make their presence known to each other, to show attention to, and to suggest a type of relationship (usually cordial) or social... (You can ask for more!)",
+    "What is artificial_intelligence?": "According to Wikipedia under CC BY-SA 3.0, Artificial intelligence (AI) refers to the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, ... (You can ask for more!)",
+    "What is education?": "According to Wikipedia under CC BY-SA 3.0, Education is the transmission of knowledge, skills, and character traits and manifests in various forms. Formal education occurs within a structured institutional framework, such as public schools, fo... (You can ask for more!)",
+    "What is hello?": "According to Wikipedia under CC BY-SA 3.0, Hello is a salutation or greeting in the English language. It is first attested in writing from 1826.\nHello, with that spelling, was used in publications in the U.S. as early as the 18 October 1826 ed... (You can ask for more!)",
+    "What is salutation?": "According to Wikipedia under CC BY-SA 3.0, A salutation is a greeting used in a letter or other communication. Salutations can be formal or informal. The most common form of salutation in an English letter includes the recipient's given name o... (You can ask for more!)",
+    "What is Lionel_Messi?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Lionel Andrés \"Leo\" Messi (Spanish pronunciation:  ⓘ; born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and t... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Lionel Andrés \"Leo\" Messi (Spanish pronunciation:  ⓘ; born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and t... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Lionel Andrés \"Leo\" Messi (Spanish pronunciation:  ⓘ; born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and t... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Lionel Andrés \"Leo\" Messi (Spanish pronunciation:  ⓘ; born 24 June 1987) is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and t... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Football?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.  Unqualified, the word football generally means the form of football that is the most popular wher... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.  Unqualified, the word football generally means the form of football that is the most popular wher... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.  Unqualified, the word football generally means the form of football that is the most popular wher... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.  Unqualified, the word football generally means the form of football that is the most popular wher... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Sport?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sport is a form of physical activity or game. Often competitive and organized, sports use, maintain, or improve physical ability and skills. They also provide enjoyment to participants and, in some ca... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sport is a form of physical activity or game. Often competitive and organized, sports use, maintain, or improve physical ability and skills. They also provide enjoyment to participants and, in some ca... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sport is a form of physical activity or game. Often competitive and organized, sports use, maintain, or improve physical ability and skills. They also provide enjoyment to participants and, in some ca... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sport is a form of physical activity or game. Often competitive and organized, sports use, maintain, or improve physical ability and skills. They also provide enjoyment to participants and, in some ca... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Biology?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Biology is the scientific study of life. It is a natural science with a broad scope but has several unifying themes that tie it together as a single, coherent field. For instance, all organisms are co... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Biology is the scientific study of life. It is a natural science with a broad scope but has several unifying themes that tie it together as a single, coherent field. For instance, all organisms are co... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Biology is the scientific study of life. It is a natural science with a broad scope but has several unifying themes that tie it together as a single, coherent field. For instance, all organisms are co... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Biology is the scientific study of life. It is a natural science with a broad scope but has several unifying themes that tie it together as a single, coherent field. For instance, all organisms are co... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Science?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Science is a systematic discipline that builds and organises knowledge in the form of testable hypotheses and predictions about the universe. Modern science is typically divided into two or three majo... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Science is a systematic discipline that builds and organises knowledge in the form of testable hypotheses and predictions about the universe. Modern science is typically divided into two or three majo... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Science is a systematic discipline that builds and organises knowledge in the form of testable hypotheses and predictions about the universe. Modern science is typically divided into two or three majo... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Science is a systematic discipline that builds and organises knowledge in the form of testable hypotheses and predictions about the universe. Modern science is typically divided into two or three majo... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Physics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Physics is the scientific study of matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundam... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Physics is the scientific study of matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundam... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Physics is the scientific study of matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundam... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Physics is the scientific study of matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundam... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Chemistry?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Chemistry is the scientific study of the properties and behavior of matter. It is a physical science within the natural sciences that studies the chemical elements that make up matter and compounds ma... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Chemistry is the scientific study of the properties and behavior of matter. It is a physical science within the natural sciences that studies the chemical elements that make up matter and compounds ma... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Chemistry is the scientific study of the properties and behavior of matter. It is a physical science within the natural sciences that studies the chemical elements that make up matter and compounds ma... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Chemistry is the scientific study of the properties and behavior of matter. It is a physical science within the natural sciences that studies the chemical elements that make up matter and compounds ma... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Mathematics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Mathematics is a field of study that discovers and organizes methods, theories and theorems that are developed and proved for the needs of empirical sciences and mathematics itself. There are many are... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Mathematics is a field of study that discovers and organizes methods, theories and theorems that are developed and proved for the needs of empirical sciences and mathematics itself. There are many are... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        },
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Mathematics is a field of study that discovers and organizes methods, theories and theorems that are developed and proved for the needs of empirical sciences and mathematics itself. There are many are... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is FIFA_World_Cup?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The FIFA World Cup, often called the World Cup, is an international association football competition among the senior men's national teams of the members of the Fédération Internationale de Football A... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Olympics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The modern Olympic Games (Olympics; French: Jeux olympiques) are the world's leading international sporting events. They feature summer and winter sports competitions in which thousands of athletes fr... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Athletics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Athletics may refer to:\n... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Basketball?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball (approximate... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Tennis?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Tennis is a racket sport that is played either individually against a single opponent (singles) or between two teams of two players each (doubles). Each player uses a tennis racket strung with a cord ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Serena_Williams?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Serena Jameka Williams (born September 26, 1981) is an American former professional tennis player. Widely regarded as one of the greatest tennis players of all time, she was ranked as the world No. 1 ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Rafael_Nadal?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Rafael Nadal Parera (born 3 June 1986) is a Spanish former professional tennis player. He was ranked as the world No. 1 in men's singles by the Association of Tennis Professionals (ATP) for 209 weeks,... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Newton's_laws_of_motion?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Newton's laws of motion are three physical laws that describe the relationship between the motion of an object and the forces acting on it. These laws, which provide the basis for Newtonian mechanics,... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Gravity?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, In physics, gravity (from Latin  gravitas 'weight') is a fundamental interaction primarily observed as a mutual attraction between all things that have mass. Gravity is, by far, the weakest of the fou... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Albert_Einstein?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Albert Einstein (/ˈaɪnstaɪn/, EYEN-styne; German:  ⓘ; 14 March 1879 – 18 April 1955) was a German-born theoretical physicist who is best known for developing the theory of relativity. Einstein also ma... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Relativity?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Relativity may refer to:\n... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Quantum_mechanics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Quantum mechanics is a fundamental theory that describes the behavior of nature at and below the scale of atoms.: 1.1  It is the foundation of all quantum physics, which includes quantum chemistry, qu... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Periodic_table?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The periodic table, also known as the periodic table of the elements, is an ordered arrangement of the chemical elements into rows (\"periods\") and columns (\"groups\"). It is an icon of chemistry and is... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Oxygen?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Oxygen is a chemical element with the symbol O and atomic number 8. It is a member of the chalcogen group in the periodic table, a highly reactive nonmetal, and a potent oxidizing agent that readily f... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Water?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Water is an inorganic compound with the chemical formula H2O. It is a transparent, tasteless, odorless, and nearly colorless chemical substance. It is the main constituent of Earth's hydrosphere and t... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is DNA?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Deoxyribonucleic acid (/diːˈɒksɪˌraɪboʊnjuːˌkliːɪk, -ˌkleɪ-/ ⓘ; DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The polymer carries genetic ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Genetics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, This is an accepted version of this page\nGenetics is the study of genes, genetic variation, and heredity in organisms. It is an important branch in biology because heredity is vital to organisms' evol... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Charles_Darwin?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Charles Robert Darwin (/ˈdɑːrwɪn/ DAR-win; 12 February 1809 – 19 April 1882) was an English naturalist, geologist, and biologist, widely known for his contributions to evolutionary biology. His propos... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Evolution?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Evolution is the change in the heritable characteristics of biological populations over successive generations. It occurs when evolutionary processes such as natural selection and genetic drift act on... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Scientific_method?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The scientific method is an empirical method for acquiring knowledge that has been referred to while doing science since at least the 17th century. Historically, it was developed through the centuries... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Algebra?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Algebra is the branch of mathematics that studies certain abstract systems, known as algebraic structures, and the manipulation of expressions within those systems. It is a generalization of arithmeti... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Calculus?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Calculus is the mathematical study of continuous change, in the same way that geometry is the study of shape, and algebra is the study of generalizations of arithmetic operations.\nOriginally called in... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Isaac_Newton?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sir Isaac Newton (/ˈnjuːtən/; 4 January  1643 – 31 March  1727) was an English polymath active as a mathematician, physicist, astronomer, alchemist, theologian, and author. Newton was a key figure in ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Geometry?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Geometry (from Ancient Greek  γεωμετρία (geōmetría) 'land measurement'; from  γῆ (gê) 'earth, land' and  μέτρον (métron) 'a measure') is a branch of mathematics concerned with properties of space such... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Pythagorean_theorem?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, In mathematics, the Pythagorean theorem or Pythagoras' theorem is a fundamental relation in Euclidean geometry between the three sides of a right triangle. It states that the area of the square whose ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Statistics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Statistics (from German: Statistik, orig. \"description of a state, a country\") is the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data. In appl... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Probability?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Probability is the branch of mathematics and statistics concerning events and numerical descriptions of how likely they are to occur.  The probability of an event is a number between 0 and 1; the larg... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Technology?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Technology is the application of conceptual knowledge to achieve practical goals, especially in a reproducible way. The word technology can also mean the products resulting from such efforts, includin... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Computer_science?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Computer science is the study of computation, information, and automation. Computer science spans theoretical disciplines (such as algorithms, theory of computation, and information theory) to applied... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Artificial_intelligence?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Artificial intelligence (AI) refers to the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Machine_learning?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Deep_learning?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Deep learning is a subset of machine learning that focuses on utilizing neural networks to perform tasks such as classification, regression, and representation learning. The field takes inspiration fr... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Internet?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Internet (or internet) is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices. It is a network of netwo... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is World_Wide_Web?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The World Wide Web (WWW or simply the Web) is an information system that enables content sharing over the Internet through user-friendly ways meant to appeal to users beyond IT specialists and hobbyis... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Tim_Berners-Lee?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sir Timothy John Berners-Lee (born 8 June 1955), also known as TimBL, is an English computer scientist best known as the inventor of the World Wide Web, the HTML markup language, the URL system, and H... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Programming?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Program (American English, Australian English), programme (Commonwealth English), programmer, or programming may refer to:\n... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Python_(programming_language)?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.\nPython is dynamically type-checked and garbage-... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is History?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, History is the systematic study of the past. As an academic discipline, it analyzes and interprets evidence to construct narratives about what happened and explain why it happened, focusing primarily ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is World_War_I?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, World War I or the First World War (28 July 1914 – 11 November 1918), also known as the Great War, was a global conflict between two coalitions: the Allies (or Entente) and the Central Powers. Fightin... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is World_War_II?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Asia-Pacific\nMediterranean and Middle East\nOther campaigns\n... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Industrial_Revolution?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Industrial Revolution, sometimes divided into the First Industrial Revolution and Second Industrial Revolution, was a transitional period of the global economy toward more widespread, efficient an... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Renaissance?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Renaissance (UK: /rɪˈneɪsəns/ rin-AY-sənss, US: /ˈrɛnəsɑːns/ ⓘ REN-ə-sahnss) is a period of history and a European cultural movement covering the 15th and 16th centuries. It marked the transition ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Leonardo_da_Vinci?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Leonardo di ser Piero da Vinci (15 April 1452 – 2 May 1519) was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and archi... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Art?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Art describes a diverse range of cultural activity centered around works utilizing creative or imaginative talents, which are expected to evoke a worthwhile experience, generally through an expression... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Painting?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Painting is a visual art, which is characterized by the practice of applying paint, pigment, color or other medium to a solid surface (called \"matrix\" or \"support\"). The medium is commonly applied to ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Mona_Lisa?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as \"the best known, the mos... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Music?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Music is the arrangement of sound to create some combination of form, harmony, melody, rhythm, or otherwise expressive content. Music is generally agreed to be a cultural universal that is present in ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Beethoven?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Ludwig van Beethoven (baptised 17 December 1770 – 26 March 1827) was a German composer and pianist. He is one of the most revered figures in the history of Western music; his works rank among the most... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Classical_music?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Classical music generally refers to the art music of the Western world, considered to be distinct from Western folk music or popular music traditions. It is sometimes distinguished as Western classica... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Jazz?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana, in the late 19th and early 20th centuries, with its roots in blues, ragtime, European harmony, Afri... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Louis_Armstrong?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Louis Daniel Armstrong (August 4, 1901 – July 6, 1971), nicknamed \"Satchmo\", \"Satch\", and \"Pops\", was an American trumpeter and vocalist. He was among the most influential figures in jazz. His career ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Cinema?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Cinema may refer to:\n... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Hollywood?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Hollywood usually refers to:\nHollywood may also refer to:\n... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Steven_Spielberg?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Steven Allan Spielberg (/ˈspiːlbɜːrɡ/ SPEEL-burg; born December 18, 1946) is an American filmmaker. A major figure of the New Hollywood era and pioneer of the modern blockbuster, Spielberg is widely r... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Literature?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Literature is any collection of written work, but it is also used more narrowly for writings specifically considered to be an art form, especially novels, plays, and poems. It includes both print and ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is William_Shakespeare?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, William Shakespeare (c. 23 April 1564 – 23 April 1616) was an English playwright, poet and actor. He is widely regarded as the greatest writer in the English language and the world's pre-eminent drama... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Hamlet?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Tragedy of Hamlet, Prince of Denmark, often shortened to Hamlet (/ˈhæmlɪt/), is a tragedy written by William Shakespeare sometime between 1599 and 1601. It is Shakespeare's longest play. Set in De... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Philosophy?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Philosophy is a systematic study of general and fundamental questions concerning topics like existence, reason, knowledge, value, mind, and language. It is a rational and critical inquiry that reflect... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Socrates?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Socrates (/ˈsɒkrətiːz/; Ancient Greek: Σωκράτης, romanized: Sōkrátēs; c. 470 – 399 BC) was a Greek philosopher from Athens who is credited as the founder of Western philosophy and as among the first m... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Plato?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Plato (/ˈpleɪtoʊ/ PLAY-toe; Greek: Πλάτων, Plátōn; born c. 428–423 BC, died 348 BC) was an ancient Greek philosopher of the Classical period who is considered a foundational thinker in Western philoso... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Aristotle?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Aristotle (Attic Greek: Ἀριστοτέλης, romanized: Aristotélēs; 384–322 BC) was an Ancient Greek philosopher and polymath. His writings cover a broad range of subjects spanning the natural sciences, phil... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Ethics?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Ethics is the philosophical study of moral phenomena. Also called moral philosophy, it investigates normative questions about what people ought to do or which behavior is morally right. Its main branc... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Psychology?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Psychology is the scientific study of mind and behavior. Its subject matter includes the behavior of humans and nonhumans, both conscious and unconscious phenomena, and mental processes such as though... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Sigmund_Freud?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Sigmund Freud (/frɔɪd/ FROYD; German: ; born Sigismund Schlomo Freud; 6 May 1856 – 23 September 1939) was an Austrian neurologist and the founder of psychoanalysis, a clinical method for evaluating an... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Behaviorism?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Behaviorism is a systematic approach to understand the behavior of humans and other animals. It assumes that behavior is either a reflex elicited by the pairing of certain antecedent stimuli in the en... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Neuroscience?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Neuroscience is the scientific study of the nervous system (the brain, spinal cord, and peripheral nervous system), its functions, and its disorders. It is a multidisciplinary science that combines ph... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Brain?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The brain is an organ that serves as the center of the nervous system in all vertebrate and most invertebrate animals. It consists of nervous tissue and is typically located in the head (cephalization... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Astronomy?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Astronomy is a natural science that studies celestial objects and the phenomena that occur in the cosmos. It uses mathematics, physics, and chemistry in order to explain their origin and their overall... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Solar_System?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed about 4.6 billion years ago when a dense region of a molecular cloud collapsed, forming the Sun... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Sun?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Moon?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The Moon is Earth's only natural satellite, orbiting at an average distance of 384399 km (238,854 mi; about 30 times Earth's diameter). It faces Earth always with the same side. This is a result of Ea... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Mars?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Mars is the fourth planet from the Sun. The surface of Mars is orange-red because it is covered in iron(III) oxide dust, giving it the nickname \"the Red Planet\". Mars is among the brightest objects in... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is Space_exploration?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, Space exploration is the use of astronomy and space technology to explore outer space. While the exploration of space is currently carried out mainly by astronomers with telescopes, its physical explo... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ],
+    "What is NASA?": [
+        {
+            "answer": "According to Wikipedia under CC BY-SA 3.0, The National Aeronautics and Space Administration (NASA /ˈnæsə/) is an independent agency of the US federal government responsible for the United States' civil space program, aeronautics research and ... (Ask me for more!)",
+            "weight": 0.6,
+            "source": "wikipedia"
+        }
+    ]
+}

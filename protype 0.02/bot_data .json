@@ -1,0 +1,194 @@
+{
+    "how are you": [
+        {
+            "answer": "I’m great!",
+            "weight": 0.5
+        },
+        {
+            "answer": "I’m fine, thanks!",
+            "weight": 0.4
+        },
+        {
+            "answer": "Doing awesome!",
+            "weight": 0.3
+        },
+        {
+            "answer": "mrsfwes",
+            "weight": 0.5
+        }
+    ],
+    "what is Python": [
+        {
+            "answer": "Python is a high-level, interpreted programming language known for its readability and versatility.",
+            "weight": 0.6
+        },
+        {
+            "answer": "It’s a programming language created by Guido van Rossum.",
+            "weight": 0.4
+        }
+    ],
+    "who invented the telephone": [
+        {
+            "answer": "Alexander Graham Bell is credited with inventing the telephone.",
+            "weight": 0.7
+        },
+        {
+            "answer": "Some say it was a collaborative effort, but Bell got the patent.",
+            "weight": 0.3
+        }
+    ],
+    "what is the capital of France": [
+        {
+            "answer": "The capital of France is Paris.",
+            "weight": 0.8
+        },
+        {
+            "answer": "It’s Paris, obviously!",
+            "weight": 0.2
+        }
+    ],
+    "why is the sky blue": [
+        {
+            "answer": "The sky appears blue due to Rayleigh scattering of sunlight.",
+            "weight": 0.6
+        },
+        {
+            "answer": "Because of how light scatters in the atmosphere.",
+            "weight": 0.4
+        }
+    ],
+    "what is AI": [
+        {
+            "answer": "Artificial Intelligence is the simulation of human intelligence in machines.",
+            "weight": 0.5
+        },
+        {
+            "answer": "AI is machines trying to think like humans!",
+            "weight": 0.3
+        }
+    ],
+    "how does the internet work": [
+        {
+            "answer": "The internet works through a network of interconnected computers using protocols like TCP/IP.",
+            "weight": 0.6
+        },
+        {
+            "answer": "It’s a bunch of cables and servers talking to each other!",
+            "weight": 0.4
+        }
+    ],
+    "what is the largest planet": [
+        {
+            "answer": "Jupiter is the largest planet in our solar system.",
+            "weight": 0.7
+        },
+        {
+            "answer": "It’s Jupiter, no contest!",
+            "weight": 0.3
+        }
+    ],
+    "who wrote Romeo and Juliet": [
+        {
+            "answer": "William Shakespeare wrote Romeo and Juliet.",
+            "weight": 0.8
+        },
+        {
+            "answer": "That’d be Shakespeare, the famous playwright.",
+            "weight": 0.2
+        }
+    ],
+    "what is gravity": [
+        {
+            "answer": "Gravity is the force that attracts objects towards each other.",
+            "weight": 0.6
+        },
+        {
+            "answer": "It’s what keeps us from floating into space!",
+            "weight": 0.4
+        }
+    ],
+    "how old is the Earth": [
+        {
+            "answer": "The Earth is approximately 4.54 billion years old.",
+            "weight": 0.7
+        },
+        {
+            "answer": "Scientists estimate it’s about 4.5 billion years.",
+            "weight": 0.3
+        }
+    ],
+    "what is the speed of light": [
+        {
+            "answer": "The speed of light is about 299,792 kilometers per second.",
+            "weight": 0.6
+        },
+        {
+            "answer": "It’s super fast—around 300,000 km/s!",
+            "weight": 0.4
+        }
+    ],
+    "who discovered electricity": [
+        {
+            "answer": "Benjamin Franklin is often credited with early experiments on electricity.",
+            "weight": 0.5
+        },
+        {
+            "answer": "It wasn’t really ‘discovered’ by one person, but Franklin helped a lot!",
+            "weight": 0.3
+        }
+    ],
+    "what is a black hole": [
+        {
+            "answer": "A black hole is a region in space where gravity is so strong that nothing can escape.",
+            "weight": 0.6
+        },
+        {
+            "answer": "It’s like a cosmic vacuum cleaner!",
+            "weight": 0.4
+        }
+    ],
+    "why do we dream": [
+        {
+            "answer": "Scientists think dreams help process emotions and memories.",
+            "weight": 0.5
+        },
+        {
+            "answer": "Nobody knows for sure, but it might be the brain sorting stuff out.",
+            "weight": 0.3
+        }
+    ],
+    "who is islam": [
+        {
+            "answer": "islam is carrot studio founder",
+            "weight": 0.5
+        }
+    ],
+    "who is flux": [
+        {
+            "answer": "flux is a carrot studio member",
+            "weight": 0.5
+        }
+    ],
+    "who are you": [
+        {
+            "answer": "i fine my bro",
+            "weight": 0.5
+        },
+        {
+            "answer": "i love you",
+            "weight": 0.5
+        }
+    ],
+    "ser carrot studio itch io ?": [
+        {
+            "answer": "كاروت ستوديو يرحب بكم في حسابنا على itch.io! · ✨ تطوير مواقع · تطبيقات · مشاريع برمجية ضخمة · مونتاج وتحرير الفيديو · تسويق وتعليق صوتي · ✍️ كتابة ...",
+            "weight": 0.5
+        }
+    ],
+    "search: who is leo messi": [
+        {
+            "answer": "Lionel Andrés \"Leo\" Messi is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club Inter Miami and the ...",
+            "weight": 0.5
+        }
+    ]
+}

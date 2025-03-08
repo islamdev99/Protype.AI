@@ -1,0 +1,30 @@
+{
+    "users": {
+        "default_user": {
+            "actions": [
+                {
+                    "action": "chat",
+                    "question": "how are you",
+                    "timestamp": "2025-03-01T23:43:45.698463"
+                },
+                {
+                    "action": "chat",
+                    "question": "how are you",
+                    "timestamp": "2025-03-01T23:44:08.342957"
+                },
+                {
+                    "action": "chat",
+                    "question": "what is Sport",
+                    "timestamp": "2025-03-01T23:49:40.481818"
+                }
+            ]
+        }
+    },
+    "response_templates": {
+        "definition": "Here’s the definition: ",
+        "process": "Let me explain how it works: ",
+        "reason": "Here’s why: ",
+        "person": "Here’s who: ",
+        "general": "Here’s what I know: "
+    }
+}
