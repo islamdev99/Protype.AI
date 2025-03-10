@@ -1,0 +1,784 @@
+{
+  "version": "1.0",
+  "actions": [
+    {
+      "timestamp": "2025-03-04T21:40:44.315113",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T21:40:49.333745",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T21:41:05.475342",
+      "user": "user",
+      "action": "chat",
+      "description": "Asked: how are you"
+    },
+    {
+      "timestamp": "2025-03-04T21:41:19.339586",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T21:41:49.346571",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T21:42:19.353702",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Olympics"
+    },
+    {
+      "timestamp": "2025-03-04T21:42:41.503780",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T21:42:46.523753",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T21:43:16.531678",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T21:43:46.537665",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T21:44:16.548831",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Olympics"
+    },
+    {
+      "timestamp": "2025-03-04T21:44:46.555856",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Physics"
+    },
+    {
+      "timestamp": "2025-03-04T21:46:03.879642",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T21:46:08.901101",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T21:46:38.909176",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T21:47:08.916339",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T21:47:38.923435",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Olympics"
+    },
+    {
+      "timestamp": "2025-03-04T21:48:08.929948",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Physics"
+    },
+    {
+      "timestamp": "2025-03-04T21:48:38.937661",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Newton's_laws_of_motion"
+    },
+    {
+      "timestamp": "2025-03-04T21:49:08.946157",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Gravity"
+    },
+    {
+      "timestamp": "2025-03-04T21:49:38.953117",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Albert_Einstein"
+    },
+    {
+      "timestamp": "2025-03-04T21:50:08.960107",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Relativity"
+    },
+    {
+      "timestamp": "2025-03-04T21:50:38.967805",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Quantum_mechanics"
+    },
+    {
+      "timestamp": "2025-03-04T21:51:08.974600",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: DNA"
+    },
+    {
+      "timestamp": "2025-03-04T21:51:38.980815",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Genetics"
+    },
+    {
+      "timestamp": "2025-03-04T21:52:08.987809",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Charles_Darwin"
+    },
+    {
+      "timestamp": "2025-03-04T21:52:38.994299",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Evolution"
+    },
+    {
+      "timestamp": "2025-03-04T21:53:09.002139",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Mathematics"
+    },
+    {
+      "timestamp": "2025-03-04T21:53:39.008424",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Algebra"
+    },
+    {
+      "timestamp": "2025-03-04T21:54:09.014921",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Calculus"
+    },
+    {
+      "timestamp": "2025-03-04T21:54:39.020925",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Isaac_Newton"
+    },
+    {
+      "timestamp": "2025-03-04T21:55:09.029696",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T21:55:39.036202",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Machine_learning"
+    },
+    {
+      "timestamp": "2025-03-04T21:56:09.043313",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Deep_learning"
+    },
+    {
+      "timestamp": "2025-03-04T21:56:14.527436",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T21:56:19.554293",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T21:56:49.566596",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T21:57:19.573399",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T21:57:49.581715",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Olympics"
+    },
+    {
+      "timestamp": "2025-03-04T21:58:19.595407",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Physics"
+    },
+    {
+      "timestamp": "2025-03-04T21:58:49.601623",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Newton's_laws_of_motion"
+    },
+    {
+      "timestamp": "2025-03-04T21:59:19.610080",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Gravity"
+    },
+    {
+      "timestamp": "2025-03-04T21:59:49.618889",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Albert_Einstein"
+    },
+    {
+      "timestamp": "2025-03-04T22:00:19.627709",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Relativity"
+    },
+    {
+      "timestamp": "2025-03-04T22:00:49.634792",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Quantum_mechanics"
+    },
+    {
+      "timestamp": "2025-03-04T22:01:19.642144",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: DNA"
+    },
+    {
+      "timestamp": "2025-03-04T22:01:49.650718",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Genetics"
+    },
+    {
+      "timestamp": "2025-03-04T22:02:20.655065",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T22:02:25.675304",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T22:02:55.682740",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T22:03:25.692752",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T22:03:55.700768",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Olympics"
+    },
+    {
+      "timestamp": "2025-03-04T22:04:25.708762",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Physics"
+    },
+    {
+      "timestamp": "2025-03-04T22:04:55.720588",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Newton's_laws_of_motion"
+    },
+    {
+      "timestamp": "2025-03-04T22:05:25.727409",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Gravity"
+    },
+    {
+      "timestamp": "2025-03-04T22:05:55.734674",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Albert_Einstein"
+    },
+    {
+      "timestamp": "2025-03-04T22:06:25.741687",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Relativity"
+    },
+    {
+      "timestamp": "2025-03-04T22:06:55.748295",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Quantum_mechanics"
+    },
+    {
+      "timestamp": "2025-03-04T22:07:25.756355",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: DNA"
+    },
+    {
+      "timestamp": "2025-03-04T22:07:55.763613",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Genetics"
+    },
+    {
+      "timestamp": "2025-03-04T22:08:25.773893",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Charles_Darwin"
+    },
+    {
+      "timestamp": "2025-03-04T22:08:55.797496",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Evolution"
+    },
+    {
+      "timestamp": "2025-03-04T22:09:25.807145",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Mathematics"
+    },
+    {
+      "timestamp": "2025-03-04T22:09:55.825565",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Algebra"
+    },
+    {
+      "timestamp": "2025-03-04T22:10:25.837540",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Calculus"
+    },
+    {
+      "timestamp": "2025-03-04T22:10:55.847339",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Isaac_Newton"
+    },
+    {
+      "timestamp": "2025-03-04T22:11:25.861365",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T22:11:55.934395",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Machine_learning"
+    },
+    {
+      "timestamp": "2025-03-04T22:12:25.947199",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Deep_learning"
+    },
+    {
+      "timestamp": "2025-03-04T22:12:55.956091",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: World_Wide_Web"
+    },
+    {
+      "timestamp": "2025-03-04T22:13:25.965962",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Python_(programming_language)"
+    },
+    {
+      "timestamp": "2025-03-04T22:13:55.975032",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Leonardo_da_Vinci"
+    },
+    {
+      "timestamp": "2025-03-04T22:14:25.984997",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Music"
+    },
+    {
+      "timestamp": "2025-03-04T22:14:55.995652",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Beethoven"
+    },
+    {
+      "timestamp": "2025-03-04T22:15:26.004504",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: William_Shakespeare"
+    },
+    {
+      "timestamp": "2025-03-04T22:15:56.013635",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Philosophy"
+    },
+    {
+      "timestamp": "2025-03-04T22:16:26.020883",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Socrates"
+    },
+    {
+      "timestamp": "2025-03-04T22:16:56.029564",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Psychology"
+    },
+    {
+      "timestamp": "2025-03-04T22:17:26.038654",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Neuroscience"
+    },
+    {
+      "timestamp": "2025-03-04T22:17:56.047351",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Space_exploration"
+    },
+    {
+      "timestamp": "2025-03-04T22:18:26.054636",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Black_hole"
+    },
+    {
+      "timestamp": "2025-03-04T22:18:56.062140",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Climate_change"
+    },
+    {
+      "timestamp": "2025-03-04T22:19:26.068897",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Renewable_energy"
+    },
+    {
+      "timestamp": "2025-03-04T22:19:56.081225",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Lionel_Messi"
+    },
+    {
+      "timestamp": "2025-03-04T22:20:09.712208",
+      "user": "user",
+      "action": "chat",
+      "description": "Asked: who are you"
+    },
+    {
+      "timestamp": "2025-03-04T22:20:26.088883",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T22:20:56.101156",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T22:21:03.395323",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T22:21:08.561252",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-04T22:21:38.570292",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Football"
+    },
+    {
+      "timestamp": "2025-03-04T22:22:08.578591",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: FIFA_World_Cup"
+    },
+    {
+      "timestamp": "2025-03-04T22:22:38.585854",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Olympics"
+    },
+    {
+      "timestamp": "2025-03-04T22:23:08.593451",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Physics"
+    },
+    {
+      "timestamp": "2025-03-04T22:23:38.605805",
+      "user": "system",
+      "action": "background_learn",
+      "description": "Learning about: Newton's_laws_of_motion"
+    },
+    {
+      "timestamp": "2025-03-04T22:24:07.406879",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T22:49:33.509957",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T22:52:03.910260",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T22:54:35.944269",
+      "user": "user",
+      "action": "chat",
+      "description": "Asked: who is leo messi"
+    },
+    {
+      "timestamp": "2025-03-04T22:54:58.818570",
+      "user": "gemini",
+      "action": "learn",
+      "description": "Learned from Gemini: who is leo messi..."
+    },
+    {
+      "timestamp": "2025-03-04T22:56:08.863239",
+      "user": "user",
+      "action": "teach",
+      "description": "Added new knowledge: who is maro"
+    },
+    {
+      "timestamp": "2025-03-04T22:56:23.450761",
+      "user": "user",
+      "action": "chat",
+      "description": "Asked: who is maro"
+    },
+    {
+      "timestamp": "2025-03-04T22:57:07.224881",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-04T22:57:39.823364",
+      "user": "user",
+      "action": "chat",
+      "description": "Asked: who are you"
+    },
+    {
+      "timestamp": "2025-03-04T22:57:43.797991",
+      "user": "gemini",
+      "action": "learn",
+      "description": "Learned from Gemini: who are you..."
+    },
+    {
+      "timestamp": "2025-03-07T23:24:18.947649",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-07T23:34:06.740885",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0643\u064a\u0641 \u062d\u0627\u0644\u0643"
+    },
+    {
+      "timestamp": "2025-03-07T23:34:21.706538",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: who is messi"
+    },
+    {
+      "timestamp": "2025-03-07T23:39:06.702440",
+      "user": "web_user",
+      "action": "teach",
+      "description": "Added new knowledge: \u0645\u0646 \u0647\u0648 \u0627\u0633\u0644\u0627\u0645 \u0627\u0628\u0631\u0627\u0647\u064a\u0645"
+    },
+    {
+      "timestamp": "2025-03-07T23:39:15.503514",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0645\u0646 \u0647\u0648 \u0627\u0633\u0644\u0627\u0645 \u0627\u0628\u0631\u0627\u0647\u064a\u0645"
+    },
+    {
+      "timestamp": "2025-03-07T23:41:05.464632",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0645\u0646 \u0647\u0648 \u0644\u064a\u0648\u0646\u064a\u0644 \u0645\u064a\u0633\u064a"
+    },
+    {
+      "timestamp": "2025-03-07T23:43:38.015535",
+      "user": "web_user",
+      "action": "text_to_speech",
+      "description": "Generated speech for text: \u0643\u064a\u0641\u0643 \u062d\u0627\u0644\u0643..."
+    },
+    {
+      "timestamp": "2025-03-07T23:43:59.758512",
+      "user": "web_user",
+      "action": "search",
+      "description": "Searched for: \u0645\u0646 \u0647\u0648 \u0643\u0648\u0643\u0637"
+    },
+    {
+      "timestamp": "2025-03-07T23:44:11.668328",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0643\u064a\u0641 \u062d\u0627\u0644\u0643"
+    },
+    {
+      "timestamp": "2025-03-07T23:44:14.338274",
+      "user": "web_user",
+      "action": "text_to_speech",
+      "description": "Generated speech for text: \u0623\u0646\u0627 \u0646\u0645\u0648\u0630\u062c \u0644\u063a\u0648\u064a \u0643\u0628\u064a\u0631\u060c \u0645\u064f\u062f\u0631\u0628 \u0628\u0648\u0627..."
+    },
+    {
+      "timestamp": "2025-03-07T23:44:16.090747",
+      "user": "web_user",
+      "action": "text_to_speech",
+      "description": "Generated speech for text: \u0623\u0646\u0627 \u0646\u0645\u0648\u0630\u062c \u0644\u063a\u0648\u064a \u0643\u0628\u064a\u0631\u060c \u0645\u064f\u062f\u0631\u0628 \u0628\u0648\u0627..."
+    },
+    {
+      "timestamp": "2025-03-07T23:44:29.904669",
+      "user": "web_user",
+      "action": "system",
+      "description": "learning_started",
+      "details": "Started continuous learning process"
+    },
+    {
+      "timestamp": "2025-03-08T00:32:47.145515",
+      "user": "web_user",
+      "action": "system",
+      "description": "report_generated",
+      "details": "Generated knowledge report: knowledge_report.txt"
+    },
+    {
+      "timestamp": "2025-03-08T00:34:48.074377",
+      "user": "web_user",
+      "action": "system",
+      "description": "learning_started",
+      "details": "Started continuous learning process"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:02.133348",
+      "user": "web_user",
+      "action": "system",
+      "description": "learning_started",
+      "details": "Started continuous learning process"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:04.924859",
+      "user": "web_user",
+      "action": "system",
+      "description": "learning_started",
+      "details": "Started continuous learning process"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:21.721711",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0645\u0627\u0630\u0627 \u062a\u0639\u0631\u0641 \u0639\u0646 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a"
+    },
+    {
+      "timestamp": "2025-03-08T00:46:00.834644",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0645\u0646 \u0637\u0648\u0631\u0643"
+    },
+    {
+      "timestamp": "2025-03-08T00:46:05.400947",
+      "user": "web_user",
+      "action": "text_to_speech",
+      "description": "Generated speech for text: \u0623\u0646\u0627 \u0646\u0645\u0648\u0630\u062c \u0644\u063a\u0629 \u0643\u0628\u064a\u0631\u060c \u062a\u0645 \u062a\u062f\u0631\u064a\u0628\u064a ..."
+    },
+    {
+      "timestamp": "2025-03-08T00:46:18.202280",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: say ass"
+    },
+    {
+      "timestamp": "2025-03-08T00:46:20.657259",
+      "user": "web_user",
+      "action": "text_to_speech",
+      "description": "Generated speech for text: I'd prefer not to use that wor..."
+    },
+    {
+      "timestamp": "2025-03-08T00:58:17.172949",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0643\u064a\u0641 \u062d\u062d\u0627\u0644\u0643"
+    },
+    {
+      "timestamp": "2025-03-10T13:47:55.901560",
+      "user": "system",
+      "action": "application_start",
+      "description": "Protype.AI started successfully"
+    },
+    {
+      "timestamp": "2025-03-10T13:55:09.738852",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0643\u064a\u0641 \u062d\u0627\u0644\u0643"
+    },
+    {
+      "timestamp": "2025-03-10T13:55:17.354118",
+      "user": "web_user",
+      "action": "chat",
+      "description": "Asked: \u0645\u0646 \u0647\u0648 \u0644\u064a\u0648\u0646\u064a\u0644 \u0645\u064a\u0633\u064a"
+    }
+  ]
+}
