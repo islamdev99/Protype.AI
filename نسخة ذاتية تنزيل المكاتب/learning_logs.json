@@ -1,0 +1,562 @@
+{
+  "logs": [
+    {
+      "timestamp": "2025-03-08T00:34:48.175309",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-08T00:34:53.177755",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-08T00:34:58.178873",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:03.180250",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Machine_learning"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:08.181748",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:13.182670",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:18.184104",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Deep_learning"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:23.185368",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:28.186325",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:33.187614",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Natural_language_processing"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:38.189250",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:43.190301",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:48.191541",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Computer_vision"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:53.192749",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-08T00:35:58.194098",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:03.195376",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Robotics"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:08.196769",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:13.198130",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:18.199436",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Data_science"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:23.200783",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:28.201975",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:33.203543",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Neural_networks"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:38.205453",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:43.208417",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:48.209893",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Quantum_computing"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:53.211747",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-08T00:36:58.212874",
+      "source": "system",
+      "action": "topic_generation",
+      "description": "Generating new topics to learn"
+    },
+    {
+      "timestamp": "2025-03-08T00:37:03.214093",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Blockchain"
+    },
+    {
+      "timestamp": "2025-03-08T00:37:08.215349",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:47:55.900806",
+      "source": "system",
+      "action": "learning",
+      "description": "Started continuous learning"
+    },
+    {
+      "timestamp": "2025-03-10T13:47:56.065329",
+      "source": "wikipedia",
+      "action": "learning",
+      "description": "Learning about: Artificial_intelligence"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:01.069301",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:06.071220",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:11.072628",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:16.074229",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:21.075695",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:26.077203",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:31.078833",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:36.080667",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:41.082006",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:46.083534",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:51.085475",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:48:56.087124",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:01.089137",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:06.091926",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:11.093975",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:16.095585",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:21.097378",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:26.098779",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:31.100172",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:36.101474",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:41.103007",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:46.105313",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:51.107199",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:49:56.108941",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:01.110546",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:06.112296",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:11.113950",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:16.115512",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:21.117189",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:26.118774",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:31.120321",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:36.122032",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:41.123753",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:46.125453",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:51.127086",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:50:56.128610",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:01.130222",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:06.132339",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:11.134256",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:16.136034",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:21.137553",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:26.138951",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:31.141284",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:36.142823",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:41.144261",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:46.147421",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:51.149168",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:51:56.150619",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:01.152329",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:06.155285",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:11.156890",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:16.158455",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:21.160469",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:26.162207",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:31.163852",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:36.165402",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do self-driving cars navigate?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:41.167025",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What is the future of renewable energy?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:46.168690",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How does blockchain technology secure transactions?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:51.170361",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How is big data transforming business analytics?"
+    },
+    {
+      "timestamp": "2025-03-10T13:52:56.172190",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: How do neural networks function?"
+    },
+    {
+      "timestamp": "2025-03-10T13:53:01.174343",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: What are the latest advancements in space exploration?"
+    },
+    {
+      "timestamp": "2025-03-10T13:53:06.176212",
+      "source": "gemini",
+      "action": "learning",
+      "description": "Learning from question: Why is quantum computing important?"
+    }
+  ]
+}
