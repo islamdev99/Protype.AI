@@ -1,0 +1,27 @@
+{
+  "logical_rules": [
+    {
+      "name": "modus_ponens",
+      "description": "If A implies B, and A is true, then B is true"
+    },
+    {
+      "name": "modus_tollens",
+      "description": "If A implies B, and B is false, then A is false"
+    },
+    {
+      "name": "disjunctive_syllogism",
+      "description": "If (A or B) is true, and A is false, then B is true"
+    }
+  ],
+  "domain_rules": {},
+  "mathematical_rules": [
+    {
+      "name": "transitivity",
+      "description": "If A = B and B = C, then A = C"
+    },
+    {
+      "name": "distributivity",
+      "description": "A * (B + C) = (A * B) + (A * C)"
+    }
+  ]
+}
