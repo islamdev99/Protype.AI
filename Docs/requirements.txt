@@ -38,8 +38,6 @@ plotly==5.18.0
 pydub==0.25.1
 elevenlabs==0.2.26
 
-# GUI (for desktop version)
-tkinter  # Usually comes with Python installation
 
 # JavaScript build tools (for React frontend)
 # Note: These are installed via npm, not pip
